@@ -14,7 +14,7 @@ const Index = () => {
         </div>
         
         {/* Call to Action Section */}
-        <section className="py-16 bg-brand-lightOrange">
+        <section className="py-16" style={{ background: 'linear-gradient(to bottom, white 0%, #FFEFD6 30%, #FFEFD6 70%, white 100%)' }}>
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-brand-brown mb-6">
               Ready to Experience Authentic Home-Style Cooking?

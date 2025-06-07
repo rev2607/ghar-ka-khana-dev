@@ -35,9 +35,9 @@ const FeaturesSection = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-10 my-8">
           {features.map((feature, index) => (
-            <Card key={index} className="bg-white p-6 rounded-lg shadow-sm flex flex-row items-start gap-4 border-none hover:shadow-lg transition-shadow">
+            <Card key={index} className="bg-white p-8 rounded-xl shadow-[0_2px_8px_rgba(0,0,0,0.12)] border border-black flex flex-row items-start gap-6 hover:shadow-lg transition-shadow">
               <div className="text-4xl mr-2 mt-1">{feature.icon}</div>
               <div>
                 <CardTitle className="text-lg font-bold text-[#7C2D12] mb-1">{feature.title}</CardTitle>

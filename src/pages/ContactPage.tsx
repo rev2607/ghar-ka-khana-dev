@@ -41,7 +41,7 @@ const ContactPage = () => {
     <div className="min-h-screen flex flex-col">
       <Navbar />
       <main className="flex-grow">
-        <section className="py-12 bg-gradient-to-r from-brand-lightOrange to-white">
+        <section className="py-12" style={{ background: 'linear-gradient(to bottom, white 0%, #FFEFD6 100%)' }}>
           <div className="container mx-auto px-4 text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-brand-brown mb-4">Contact Us</h1>
             <p className="text-lg text-gray-700 max-w-2xl mx-auto">
@@ -50,119 +50,121 @@ const ContactPage = () => {
           </div>
         </section>
 
-        <section className="py-16 container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <div>
-              <h2 className="text-3xl font-bold text-brand-brown mb-6">Get In Touch</h2>
-              <p className="text-gray-700 mb-8">
-                Have questions about our subscription plans, special dietary requirements, or anything else? Fill out the form and we'll get back to you as soon as possible.
-              </p>
-              
-              <div className="space-y-6">
-                <div className="flex items-start">
-                  <div className="bg-brand-lightOrange p-3 rounded-full mr-4">
-                    <MapPin className="text-brand-brown" />
-                  </div>
-                  <div>
-                    <h3 className="font-medium">Address</h3>
-                    <p className="text-gray-600">Shop 2, Plot Y5, Sector 19, Shahbaaz Gaon, CBD Belapur, Navi Mumbai 400614</p>
-                  </div>
-                </div>
+        <section className="py-16" style={{ background: 'linear-gradient(to bottom, #FFEFD6 0%, white 100%)' }}>
+          <div className="container mx-auto px-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+              <div>
+                <h2 className="text-3xl font-bold text-brand-brown mb-6">Get In Touch</h2>
+                <p className="text-gray-700 mb-8">
+                  Have questions about our subscription plans, special dietary requirements, or anything else? Fill out the form and we'll get back to you as soon as possible.
+                </p>
                 
-                <div className="flex items-start">
-                  <div className="bg-brand-lightOrange p-3 rounded-full mr-4">
-                    <Phone className="text-brand-brown" />
+                <div className="space-y-6">
+                  <div className="flex items-start">
+                    <div className="bg-brand-lightOrange p-3 rounded-full mr-4">
+                      <MapPin className="text-brand-brown" />
+                    </div>
+                    <div>
+                      <h3 className="font-medium">Address</h3>
+                      <p className="text-gray-600">Shop 2, Plot Y5, Sector 19, Shahbaaz Gaon, CBD Belapur, Navi Mumbai 400614</p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="font-medium">Phone</h3>
-                    <p className="text-gray-600">+91 8108-325-444</p>
+                  
+                  <div className="flex items-start">
+                    <div className="bg-brand-lightOrange p-3 rounded-full mr-4">
+                      <Phone className="text-brand-brown" />
+                    </div>
+                    <div>
+                      <h3 className="font-medium">Phone</h3>
+                      <p className="text-gray-600">+91 8108-325-444</p>
+                    </div>
                   </div>
-                </div>
-                
-                <div className="flex items-start">
-                  <div className="bg-brand-lightOrange p-3 rounded-full mr-4">
-                    <Mail className="text-brand-brown" />
+                  
+                  <div className="flex items-start">
+                    <div className="bg-brand-lightOrange p-3 rounded-full mr-4">
+                      <Mail className="text-brand-brown" />
+                    </div>
+                    <div>
+                      <h3 className="font-medium">Email</h3>
+                      <p className="text-gray-600">info@neelamghar.com</p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="font-medium">Email</h3>
-                    <p className="text-gray-600">info@neelamghar.com</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start">
-                  <div className="bg-brand-lightOrange p-3 rounded-full mr-4">
-                    <span className="text-xl">⏰</span>
-                  </div>
-                  <div>
-                    <h3 className="font-medium">Business Hours</h3>
-                    <p className="text-gray-600">Monday to Saturday</p>
-                    <p className="text-gray-600">Day Delivery: 11:00 AM - 1:30 PM</p>
-                    <p className="text-gray-600">Night Delivery: 7:00 PM - 9:30 PM</p>
+                  
+                  <div className="flex items-start">
+                    <div className="bg-brand-lightOrange p-3 rounded-full mr-4">
+                      <span className="text-xl">⏰</span>
+                    </div>
+                    <div>
+                      <h3 className="font-medium">Business Hours</h3>
+                      <p className="text-gray-600">Monday to Saturday</p>
+                      <p className="text-gray-600">Day Delivery: 11:00 AM - 1:30 PM</p>
+                      <p className="text-gray-600">Night Delivery: 7:00 PM - 9:30 PM</p>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            
-            <div>
-              <Card className="border-none shadow-lg">
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-bold text-brand-brown mb-4">Send us a Message</h3>
-                  <form onSubmit={handleSubmit} className="space-y-4">
-                    <div>
-                      <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Name</label>
-                      <Input
-                        id="name"
-                        name="name"
-                        value={formData.name}
-                        onChange={handleChange}
-                        required
-                      />
-                    </div>
-                    <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email</label>
-                      <Input
-                        id="email"
-                        name="email"
-                        type="email"
-                        value={formData.email}
-                        onChange={handleChange}
-                        required
-                      />
-                    </div>
-                    <div>
-                      <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">Phone</label>
-                      <Input
-                        id="phone"
-                        name="phone"
-                        value={formData.phone}
-                        onChange={handleChange}
-                      />
-                    </div>
-                    <div>
-                      <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Message</label>
-                      <Textarea
-                        id="message"
-                        name="message"
-                        rows={5}
-                        value={formData.message}
-                        onChange={handleChange}
-                        required
-                      />
-                    </div>
-                    <Button 
-                      type="submit" 
-                      className="w-full bg-brand-orange hover:bg-brand-brown"
-                    >
-                      Send Message
-                    </Button>
-                  </form>
-                </CardContent>
-              </Card>
+              
+              <div>
+                <Card className="rounded-xl border border-black shadow-[0_2px_8px_rgba(0,0,0,0.12)]">
+                  <CardContent className="p-6">
+                    <h3 className="text-xl font-bold text-[#7C2D12] mb-4">Send us a Message</h3>
+                    <form onSubmit={handleSubmit} className="space-y-4">
+                      <div>
+                        <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                        <Input
+                          id="name"
+                          name="name"
+                          value={formData.name}
+                          onChange={handleChange}
+                          required
+                        />
+                      </div>
+                      <div>
+                        <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                        <Input
+                          id="email"
+                          name="email"
+                          type="email"
+                          value={formData.email}
+                          onChange={handleChange}
+                          required
+                        />
+                      </div>
+                      <div>
+                        <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">Phone</label>
+                        <Input
+                          id="phone"
+                          name="phone"
+                          value={formData.phone}
+                          onChange={handleChange}
+                        />
+                      </div>
+                      <div>
+                        <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                        <Textarea
+                          id="message"
+                          name="message"
+                          rows={5}
+                          value={formData.message}
+                          onChange={handleChange}
+                          required
+                        />
+                      </div>
+                      <Button 
+                        type="submit" 
+                        className="w-full bg-brand-orange hover:bg-brand-brown"
+                      >
+                        Send Message
+                      </Button>
+                    </form>
+                  </CardContent>
+                </Card>
+              </div>
             </div>
           </div>
         </section>
 
-        <section className="py-12 bg-gray-50">
+        <section className="py-12" style={{ background: 'linear-gradient(to bottom, white 0%, #FFEFD6 100%)' }}>
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl font-bold text-brand-brown mb-6">Delivery Areas</h2>
             <p className="text-gray-700 max-w-2xl mx-auto mb-8">

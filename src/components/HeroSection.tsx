@@ -35,7 +35,7 @@ const HeroSection = () => {
             />
             {/* Offer Price Badge - overlaps top left of food image */}
             <div
-              className="absolute -top-10 -left-16 w-32 h-32 md:w-36 md:h-36 lg:w-40 lg:h-40 rounded-full flex flex-col items-center justify-center text-center z-30"
+              className="absolute -top-10 -left-24 w-32 h-32 md:w-36 md:h-36 lg:w-40 lg:h-40 rounded-full flex flex-col items-center justify-center text-center z-30"
               style={{
                 background: 'linear-gradient(135deg, #F47A1F 0%,rgb(202, 106, 28) 100%)',
                 fontWeight: 600,
