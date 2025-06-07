@@ -2,7 +2,7 @@ import React from 'react';
 
 const HeroSection = () => {
   return (
-    <section className="w-full bg-white pt-16 pb-2">
+    <section className="w-full pt-16 pb-2 bg-gradient-to-b from-[#FFD9A0] to-white">
       <div className="max-w-[1400px] mx-auto flex flex-col md:flex-row items-start justify-between gap-10 px-8 relative min-h-[460px] md:min-h-[570px] lg:min-h-[660px]">
         {/* Left: Headline, Subheadline */}
         <div className="flex flex-col justify-start flex-1 min-w-[350px] px-0 md:px-0 text-left z-20 ml-[-32px]">

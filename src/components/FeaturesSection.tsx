@@ -26,7 +26,7 @@ const features = [
 
 const FeaturesSection = () => {
   return (
-    <section className="pt-0 pb-0 bg-gray-50">
+    <section className="pt-0 pb-0 bg-transparent">
       <div className="container mx-auto px-0 mt-0 pt-0">
         <div className="text-center mb-0">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Why Choose Neelam's Ghar-Ka-Khana?</h2>
