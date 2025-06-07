@@ -1,0 +1,93 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 20 10% 5%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 20 10% 5%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 20 10% 5%;
+
+    --primary: 24 100% 56%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 25 100% 85%;
+    --secondary-foreground: 24 10% 10%;
+
+    --muted: 25 10% 96%;
+    --muted-foreground: 25 5% 45%;
+
+    --accent: 120 33% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 20 5% 90%;
+    --input: 20 5% 90%;
+    --ring: 24 100% 56%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 20 10% 5%;
+    --foreground: 0 0% 98%;
+
+    --card: 20 10% 5%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 20 10% 5%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 24 100% 56%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 25 30% 20%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 25 30% 20%;
+    --muted-foreground: 25 5% 65%;
+
+    --accent: 120 33% 40%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 25 30% 20%;
+    --input: 25 30% 20%;
+    --ring: 24 100% 56%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-inter;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-poppins font-semibold;
+  }
+}
