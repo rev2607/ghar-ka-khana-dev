@@ -52,6 +52,7 @@ const ContactPage = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <div className="w-full bg-brand-orange text-white text-center py-2 font-bold text-lg shadow-md z-50">Launching soon in your Area</div>
       <Navbar />
       <main className="flex-grow">
         <section className="py-12" style={{ background: 'linear-gradient(to bottom, white 0%, #FFEFD6 100%)' }}>
