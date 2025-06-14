@@ -9,32 +9,45 @@ import { toast } from 'sonner';
 import { Phone, Mail, MapPin } from 'lucide-react';
 
 const ContactPage = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    message: ''
-  });
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
+  const [message, setMessage] = useState('');
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // In a real app, this would send the data to Supabase or an API
-    console.log('Form submitted:', formData);
-    toast.success("Thank you for your message! We'll get back to you soon.");
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      message: ''
-    });
+
+    const payload = {
+      name,
+      email,
+      phone,
+      message,
+    };
+
+    try {
+      const response = await fetch("https://jtdfonlvb1.execute-api.ap-south-1.amazonaws.com/prod/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(payload)
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        toast.success("Thank you for your message! We'll call you soon.");
+        setName('');
+        setEmail('');
+        setPhone('');
+        setMessage('');
+      } else {
+        toast.error("Something went wrong. Please try again.");
+      }
+    } catch (err) {
+      console.error("Network error:", err);
+      toast.error("Failed to send message. Please try again later.");
+    }
   };
 
   return (
@@ -108,55 +121,18 @@ const ContactPage = () => {
                 <Card className="rounded-xl border border-black shadow-[0_2px_8px_rgba(0,0,0,0.12)]">
                   <CardContent className="p-6">
                     <h3 className="text-xl font-bold text-[#7C2D12] mb-4">Send us a Message</h3>
-                    <form onSubmit={handleSubmit} className="space-y-4">
-                      <div>
-                        <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Name</label>
-                        <Input
-                          id="name"
-                          name="name"
-                          value={formData.name}
-                          onChange={handleChange}
-                          required
-                        />
-                      </div>
-                      <div>
-                        <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email</label>
-                        <Input
-                          id="email"
-                          name="email"
-                          type="email"
-                          value={formData.email}
-                          onChange={handleChange}
-                          required
-                        />
-                      </div>
-                      <div>
-                        <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">Phone</label>
-                        <Input
-                          id="phone"
-                          name="phone"
-                          value={formData.phone}
-                          onChange={handleChange}
-                        />
-                      </div>
-                      <div>
-                        <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Message</label>
-                        <Textarea
-                          id="message"
-                          name="message"
-                          rows={5}
-                          value={formData.message}
-                          onChange={handleChange}
-                          required
-                        />
-                      </div>
-                      <Button 
-                        type="submit" 
-                        className="w-full bg-brand-orange hover:bg-brand-brown"
-                      >
-                        Send Message
-                      </Button>
-                    </form>
+                    <div className="flex justify-center">
+                      <iframe 
+                        src="https://docs.google.com/forms/d/e/1FAIpQLSfUQmlGosqQrbSvn8rvFvedG2GZQlhc6uzm5nfPpl7hUp0hfA/viewform?embedded=true" 
+                        width="640" 
+                        height="959" 
+                        frameBorder="0" 
+                        marginHeight={0} 
+                        marginWidth={0}
+                        title="Contact Google Form"
+                        style={{ maxWidth: '100%', width: '100%', border: 'none' }}
+                      >Loading…</iframe>
+                    </div>
                   </CardContent>
                 </Card>
               </div>
