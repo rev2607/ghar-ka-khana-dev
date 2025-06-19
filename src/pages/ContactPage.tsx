@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
@@ -7,6 +7,48 @@ import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent } from '@/components/ui/card';
 import { toast } from 'sonner';
 import { Phone, Mail, MapPin } from 'lucide-react';
+
+// GoogleFormIframe component
+const GoogleFormIframe = () => {
+  const [iframeHeight, setIframeHeight] = useState(1100);
+  const iframeRef = useRef(null);
+
+  const handleIframeLoad = () => {
+    try {
+      const iframe = iframeRef.current;
+      if (iframe) {
+        // Check if the form has been submitted by inspecting the URL
+        const currentUrl = iframe.contentWindow?.location.href;
+        if (
+          currentUrl &&
+          (currentUrl.includes('formResponse') || currentUrl.includes('viewform?edit2=2'))
+        ) {
+          setIframeHeight(300); // Shrink the iframe after submission
+        }
+      }
+    } catch (e) {
+      // Cross-origin access will fail, fallback to shrinking after a delay
+      setTimeout(() => setIframeHeight(300), 1000);
+    }
+  };
+
+  return (
+    <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
+      <iframe
+        ref={iframeRef}
+        src="https://docs.google.com/forms/d/e/1FAIpQLSfUQmlGosqQrbSvn8rvFvedG2GZQlhc6uzm5nfPpl7hUp0hfA/viewform?embedded=true"
+        width="100%"
+        height={iframeHeight}
+        frameBorder="0"
+        marginHeight={0}
+        marginWidth={0}
+        title="Contact Google Form"
+        style={{ maxWidth: 800, width: '100%', border: 'none', transition: 'height 0.5s' }}
+        onLoad={handleIframeLoad}
+      >Loading…</iframe>
+    </div>
+  );
+};
 
 const ContactPage = () => {
   const [name, setName] = useState('');
@@ -52,7 +94,6 @@ const ContactPage = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <div className="w-full bg-brand-orange text-white text-center py-2 font-bold text-lg shadow-md z-50">Launching soon in your Area</div>
       <Navbar />
       <main className="flex-grow">
         <section className="py-12" style={{ background: 'linear-gradient(to bottom, white 0%, #FFEFD6 100%)' }}>
@@ -90,7 +131,7 @@ const ContactPage = () => {
                     </div>
                     <div>
                       <h3 className="font-medium">Phone</h3>
-                      <p className="text-gray-600">+91 8108-325-444</p>
+                      <p className="text-gray-600">+91 9000-000-000</p>
                     </div>
                   </div>
                   
@@ -100,7 +141,7 @@ const ContactPage = () => {
                     </div>
                     <div>
                       <h3 className="font-medium">Email</h3>
-                      <p className="text-gray-600">info@neelamghar.com</p>
+                      <p className="text-gray-600">sample@email.com</p>
                     </div>
                   </div>
                   
@@ -123,16 +164,7 @@ const ContactPage = () => {
                   <CardContent className="p-6">
                     <h3 className="text-xl font-bold text-[#7C2D12] mb-4">Send us a Message</h3>
                     <div className="flex justify-center">
-                      <iframe 
-                        src="https://docs.google.com/forms/d/e/1FAIpQLSfUQmlGosqQrbSvn8rvFvedG2GZQlhc6uzm5nfPpl7hUp0hfA/viewform?embedded=true" 
-                        width="640" 
-                        height="959" 
-                        frameBorder="0" 
-                        marginHeight={0} 
-                        marginWidth={0}
-                        title="Contact Google Form"
-                        style={{ maxWidth: '100%', width: '100%', border: 'none' }}
-                      >Loading…</iframe>
+                      <GoogleFormIframe />
                     </div>
                   </CardContent>
                 </Card>

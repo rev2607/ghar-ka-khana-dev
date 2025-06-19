@@ -3,31 +3,33 @@ import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
-    <header className="w-full shadow-md bg-white">
-      {/* Logo and tagline centered */}
-      <div className="w-full flex flex-col items-center py-2 bg-white">
-        <img 
-          src="/logo.png" 
-          alt="Ghar-Ka-Khana Logo" 
-          className="h-20 w-auto object-contain mb-1"
-        />
-        <span className="text-xs md:text-sm font-semibold text-[#8B4513] text-center">
-          Homely Food being delivered at your Home & Office
-        </span>
-      </div>
-      {/* Nav links centered below logo/tagline, login/register on right */}
-      <div className="w-full bg-white">
-        <div className="max-w-[1400px] mx-auto px-6 flex items-center justify-center relative">
-          <div className="flex items-center space-x-10 py-2 mx-auto">
-            <Link to="/" className="text-[#222] text-lg font-medium hover:font-bold hover:text-[#222] transition-colors">Home</Link>
-            <Link to="/menu" className="text-[#222] text-lg font-medium hover:font-bold hover:text-[#222] transition-colors">Menu</Link>
-            <Link to="/about" className="text-[#222] text-lg font-medium hover:font-bold hover:text-[#222] transition-colors">About</Link>
-            <Link to="/contact" className="text-[#222] text-lg font-medium hover:font-bold hover:text-[#222] transition-colors">Contact</Link>
-          </div>
-          <div className="absolute right-0 top-1/2 -translate-y-1/2">
-            <Link to="/login" className="text-[#222] text-lg font-medium hover:font-bold hover:text-[#222] transition-colors">Login/Register</Link>
-          </div>
+    <header className="w-full shadow-lg bg-white border-b border-gray-200">
+      <div className="w-full flex items-center justify-between px-6 py-2 max-w-[1600px] mx-auto">
+        {/* Left: Logo and tagline */}
+        <div className="flex items-center space-x-3 min-w-[320px]">
+          <img 
+            src="/logo.png" 
+            alt="Ghar-Ka-Khana Logo" 
+            className="h-16 w-auto object-contain"
+          />
+          <span className="text-xs md:text-sm font-semibold text-black whitespace-nowrap">
+            Homely Food being delivered at your<br />Home & Office
+          </span>
         </div>
+        {/* Center: Launching soon banner */}
+        <div className="flex-1 flex justify-center">
+          <span className="text-2xl md:text-4xl font-bold text-[#F47A1F] text-center whitespace-nowrap">
+            Launching soon in your Area
+          </span>
+        </div>
+        {/* Right: Nav links */}
+        <nav className="flex items-center space-x-4 min-w-[420px] justify-end">
+          <Link to="/" className="text-[#222] text-lg font-medium hover:font-bold hover:text-[#F47A1F] transition-colors">Home</Link>
+          <Link to="/menu" className="text-[#222] text-lg font-medium hover:font-bold hover:text-[#F47A1F] transition-colors">Menu</Link>
+          <Link to="/about" className="text-[#222] text-lg font-medium hover:font-bold hover:text-[#F47A1F] transition-colors">About</Link>
+          <Link to="/contact" className="text-[#222] text-lg font-medium hover:font-bold hover:text-[#F47A1F] transition-colors">Contact</Link>
+          <Link to="/login" className="text-[#222] text-lg font-medium hover:font-bold hover:text-[#F47A1F] transition-colors">Login/Register</Link>
+        </nav>
       </div>
     </header>
   );
