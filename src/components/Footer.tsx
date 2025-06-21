@@ -4,14 +4,14 @@ import { Phone, Mail, MapPin } from 'lucide-react';
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-50 border-t mt-12">
+    <footer className="bg-gray-50 border-t">
       <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Logo and About */}
           <div className="md:col-span-1">
             <Link to="/" className="flex items-center">
               <img 
-                src="/lovable-uploads/4604ffb0-30c8-4a7e-a18f-49882378f1da.png" 
+                src="/logo.png" 
                 alt="Ghar-Ka-Khana Neelam's" 
                 className="h-10"
               />

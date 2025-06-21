@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import CountdownTimer from './CountdownTimer';
 
 const Navbar = () => {
   return (
@@ -18,9 +19,7 @@ const Navbar = () => {
         </div>
         {/* Center: Launching soon banner */}
         <div className="flex-1 flex justify-center">
-          <span className="text-2xl md:text-4xl font-bold text-[#F47A1F] text-center whitespace-nowrap">
-            Launching soon in your Area
-          </span>
+          <CountdownTimer targetDate="2025-06-29T00:00:00" size="small" />
         </div>
         {/* Right: Nav links */}
         <nav className="flex items-center space-x-4 min-w-[420px] justify-end">

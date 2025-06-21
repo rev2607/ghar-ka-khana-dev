@@ -9,7 +9,7 @@ const Index = () => {
       <Navbar />
       <main className="flex-grow">
         <HeroSection />
-        <div style={{marginTop: '-96px'}}>
+        <div style={{marginTop: '-64px'}}>
           <FeaturesSection />
         </div>
         
@@ -37,6 +37,15 @@ const Index = () => {
                 Contact Us
               </a>
             </div>
+          </div>
+        </section>
+
+        {/* Disclaimer Section */}
+        <section className="bg-brand-brown py-4">
+          <div className="container mx-auto px-4 text-center">
+            <p className="text-white text-sm">
+              Disclaimer: * = 59/- is the Introductory offer for 1st 1 week order only; there by charges will be as per Menu
+            </p>
           </div>
         </section>
       </main>
