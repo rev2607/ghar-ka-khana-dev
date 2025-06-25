@@ -13,11 +13,11 @@ const HeroSection = () => {
             <img
               src="/food.png"
               alt="Food Tray"
-              className="w-full max-w-[900px] h-auto object-contain -rotate-6"
+              className="w-full max-w-[1100px] h-auto object-contain -rotate-6"
             />
             {/* Offer Price Badge */}
             <div
-              className="absolute -top-12 -right-8 w-44 h-44 md:w-48 md:h-48 rounded-full flex flex-col items-center justify-center text-center z-10"
+              className="absolute top-0 right-16 w-44 h-44 md:w-48 md:h-48 rounded-full flex flex-col items-center justify-center text-center z-10"
               style={{
                 background: 'linear-gradient(135deg, #F47A1F 0%,rgb(202, 106, 28) 100%)',
                 fontWeight: 600,
