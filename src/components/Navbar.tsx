@@ -19,7 +19,7 @@ const Navbar = () => {
         </div>
         {/* Center: Launching soon banner */}
         <div className="flex-1 flex justify-center">
-          <CountdownTimer targetDate="2025-06-29T00:00:00" size="small" />
+          <CountdownTimer targetDate="2025-07-06T00:00:00" size="small" />
         </div>
         {/* Right: Nav links */}
         <nav className="flex items-center space-x-4 min-w-[420px] justify-end">
