@@ -59,7 +59,93 @@ const MenuPage = () => {
           </div>
         </section>
 
-        <section className="py-8 md:py-16" style={{ background: 'linear-gradient(to bottom, #FFEFD6 0%, white 100%)' }}>
+        {/* Special Menu for July 1st */}
+        <section className="py-4 md:py-8">
+          <div className="container mx-auto px-4">
+            <div className="max-w-3xl mx-auto mb-8">
+              <h2 className="text-xl md:text-2xl font-bold text-brand-brown mb-2 text-center">Menu for July 1st - Lunch</h2>
+              <div className="overflow-x-auto">
+                <table className="w-full border text-sm md:text-base mb-6">
+                  <thead>
+                    <tr className="bg-green-700 text-white">
+                      <th className="p-2">Veg Normal</th>
+                      <th className="p-2 text-left bg-green-100 text-green-900" colSpan={2}>Chapathis, Rice, Special Bhaji, Daal Plain, Salaad/Papad/Pickle</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="bg-green-50">
+                      <td className="p-2 font-semibold text-green-800" colSpan={2}>Rate = 75/- for Tiffin Delivery Order<br/>Rate = 85/- for Take-away</td>
+                    </tr>
+                  </tbody>
+                  <thead>
+                    <tr className="bg-green-800 text-white">
+                      <th className="p-2">Veg Special</th>
+                      <th className="p-2 text-left bg-green-100 text-green-900" colSpan={2}>Chapathis + Puri, Rice, Special Bhaji, Daal Tadka, Salaad/Papad/Pickle, Desert/Sweets</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="bg-green-50">
+                      <td className="p-2 font-semibold text-green-800" colSpan={2}>Rate = 85/- for Tiffin Delivery Order<br/>Rate = 95/- for Take-away</td>
+                    </tr>
+                  </tbody>
+                  <thead>
+                    <tr className="bg-red-700 text-white">
+                      <th className="p-2">Non-Veg</th>
+                      <th className="p-2 text-left bg-orange-100 text-red-900" colSpan={2}>Chapathis, Rice, Chicken Masala, Salaad/Papad/Pickle</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="bg-orange-50">
+                      <td className="p-2 font-semibold text-red-800" colSpan={2}>Rate = 110/- for Tiffin Delivery Order<br/>Rate = 120/- for Take Away</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div className="max-w-3xl mx-auto">
+              <h2 className="text-xl md:text-2xl font-bold text-brand-brown mb-2 text-center">Menu for July 1st - Dinner</h2>
+              <div className="overflow-x-auto">
+                <table className="w-full border text-sm md:text-base">
+                  <thead>
+                    <tr className="bg-green-700 text-white">
+                      <th className="p-2">Veg Normal</th>
+                      <th className="p-2 text-left bg-green-100 text-green-900" colSpan={2}>Chapathis, Rice, Shimla Mirch Singdana, Daal Plain, Salaad/Papad/Pickle</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="bg-green-50">
+                      <td className="p-2 font-semibold text-green-800" colSpan={2}>Rate = 75/- for Tiffin Delivery Order<br/>Rate = 85/- for Take-away</td>
+                    </tr>
+                  </tbody>
+                  <thead>
+                    <tr className="bg-green-800 text-white">
+                      <th className="p-2">Veg Special</th>
+                      <th className="p-2 text-left bg-green-100 text-green-900" colSpan={2}>Chapathis + Puri, Rice, Shimla Mirch Singdana, Daal Tadka, Salaad/Papad/Pickle, Desert/Sweets</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="bg-green-50">
+                      <td className="p-2 font-semibold text-green-800" colSpan={2}>Rate = 85/- for Tiffin Delivery Order<br/>Rate = 95/- for Take-away</td>
+                    </tr>
+                  </tbody>
+                  <thead>
+                    <tr className="bg-red-700 text-white">
+                      <th className="p-2">Non-Veg</th>
+                      <th className="p-2 text-left bg-orange-100 text-red-900" colSpan={2}>Chapathis, Rice, Chicken Masala, Salaad/Papad/Pickle</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="bg-orange-50">
+                      <td className="p-2 font-semibold text-red-800" colSpan={2}>Rate = 110/- for Tiffin Delivery Order<br/>Rate = 120/- for Take Away</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-8 md:py-16" style={{ background: 'linear-gradient(to bottom, white 0%, #FFEFD6 100%)' }}>
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               {/* Menu Plans Grid */}
