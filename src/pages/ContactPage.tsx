@@ -96,64 +96,64 @@ const ContactPage = () => {
     <div className="min-h-screen flex flex-col">
       <Navbar />
       <main className="flex-grow">
-        <section className="py-12" style={{ background: 'linear-gradient(to bottom, white 0%, #FFEFD6 100%)' }}>
+        <section className="py-8 md:py-12" style={{ background: 'linear-gradient(to bottom, white 0%, #FFEFD6 100%)' }}>
           <div className="container mx-auto px-4 text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-brand-brown mb-4">Contact Us</h1>
-            <p className="text-lg text-gray-700 max-w-2xl mx-auto">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-brown mb-3 md:mb-4">Contact Us</h1>
+            <p className="text-base md:text-lg text-gray-700 max-w-2xl mx-auto">
               Have questions or feedback? We'd love to hear from you. Get in touch with our team.
             </p>
           </div>
         </section>
 
-        <section className="py-16" style={{ background: 'linear-gradient(to bottom, #FFEFD6 0%, white 100%)' }}>
+        <section className="py-8 md:py-16" style={{ background: 'linear-gradient(to bottom, #FFEFD6 0%, white 100%)' }}>
           <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
               <div>
-                <h2 className="text-3xl font-bold text-brand-brown mb-6">Get In Touch</h2>
-                <p className="text-gray-700 mb-8">
+                <h2 className="text-2xl md:text-3xl font-bold text-brand-brown mb-4 md:mb-6">Get In Touch</h2>
+                <p className="text-gray-700 mb-6 md:mb-8 text-sm md:text-base">
                   Have questions about our subscription plans, special dietary requirements, or anything else? Fill out the form and we'll get back to you as soon as possible.
                 </p>
                 
-                <div className="space-y-6">
+                <div className="space-y-4 md:space-y-6">
                   <div className="flex items-start">
-                    <div className="bg-brand-lightOrange p-3 rounded-full mr-4">
-                      <MapPin className="text-brand-brown" />
+                    <div className="bg-brand-lightOrange p-2 md:p-3 rounded-full mr-3 md:mr-4">
+                      <MapPin className="text-brand-brown w-4 h-4 md:w-5 md:h-5" />
                     </div>
                     <div>
-                      <h3 className="font-medium">Address</h3>
-                      <p className="text-gray-600">Shop 2, Plot Y5, Sector 19, Shahbaaz Gaon, CBD Belapur, Navi Mumbai 400614</p>
+                      <h3 className="font-medium text-sm md:text-base">Address</h3>
+                      <p className="text-gray-600 text-sm md:text-base">Shop 2, Plot Y5, Sector 19, Shahbaaz Gaon, CBD Belapur, Navi Mumbai 400614</p>
                     </div>
                   </div>
                   
                   <div className="flex items-start">
-                    <div className="bg-brand-lightOrange p-3 rounded-full mr-4">
-                      <Phone className="text-brand-brown" />
+                    <div className="bg-brand-lightOrange p-2 md:p-3 rounded-full mr-3 md:mr-4">
+                      <Phone className="text-brand-brown w-4 h-4 md:w-5 md:h-5" />
                     </div>
                     <div>
-                      <h3 className="font-medium">Phone</h3>
-                      <p className="text-gray-600">+91 9000-000-000</p>
+                      <h3 className="font-medium text-sm md:text-base">Phone</h3>
+                      <p className="text-gray-600 text-sm md:text-base">+91 9000-000-000</p>
                     </div>
                   </div>
                   
                   <div className="flex items-start">
-                    <div className="bg-brand-lightOrange p-3 rounded-full mr-4">
-                      <Mail className="text-brand-brown" />
+                    <div className="bg-brand-lightOrange p-2 md:p-3 rounded-full mr-3 md:mr-4">
+                      <Mail className="text-brand-brown w-4 h-4 md:w-5 md:h-5" />
                     </div>
                     <div>
-                      <h3 className="font-medium">Email</h3>
-                      <p className="text-gray-600">sample@email.com</p>
+                      <h3 className="font-medium text-sm md:text-base">Email</h3>
+                      <p className="text-gray-600 text-sm md:text-base">sample@email.com</p>
                     </div>
                   </div>
                   
                   <div className="flex items-start">
-                    <div className="bg-brand-lightOrange p-3 rounded-full mr-4">
-                      <span className="text-xl">⏰</span>
+                    <div className="bg-brand-lightOrange p-2 md:p-3 rounded-full mr-3 md:mr-4">
+                      <span className="text-lg md:text-xl">⏰</span>
                     </div>
                     <div>
-                      <h3 className="font-medium">Business Hours</h3>
-                      <p className="text-gray-600">Monday to Saturday</p>
-                      <p className="text-gray-600">Day Delivery: 11:00 AM - 1:30 PM</p>
-                      <p className="text-gray-600">Night Delivery: 7:00 PM - 9:30 PM</p>
+                      <h3 className="font-medium text-sm md:text-base">Business Hours</h3>
+                      <p className="text-gray-600 text-sm md:text-base">Monday to Saturday</p>
+                      <p className="text-gray-600 text-sm md:text-base">Day Delivery: 11:00 AM - 1:30 PM</p>
+                      <p className="text-gray-600 text-sm md:text-base">Night Delivery: 7:00 PM - 9:30 PM</p>
                     </div>
                   </div>
                 </div>
@@ -161,8 +161,8 @@ const ContactPage = () => {
               
               <div>
                 <Card className="rounded-xl border border-black shadow-[0_2px_8px_rgba(0,0,0,0.12)]">
-                  <CardContent className="p-6">
-                    <h3 className="text-xl font-bold text-[#7C2D12] mb-4">Send us a Message</h3>
+                  <CardContent className="p-4 md:p-6">
+                    <h3 className="text-lg md:text-xl font-bold text-[#7C2D12] mb-3 md:mb-4">Send us a Message</h3>
                     <div className="flex justify-center">
                       <GoogleFormIframe />
                     </div>
@@ -173,21 +173,21 @@ const ContactPage = () => {
           </div>
         </section>
 
-        <section className="py-12" style={{ background: 'linear-gradient(to bottom, white 0%, #FFEFD6 100%)' }}>
+        <section className="py-8 md:py-12" style={{ background: 'linear-gradient(to bottom, white 0%, #FFEFD6 100%)' }}>
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl font-bold text-brand-brown mb-6">Delivery Areas</h2>
-            <p className="text-gray-700 max-w-2xl mx-auto mb-8">
+            <h2 className="text-2xl md:text-3xl font-bold text-brand-brown mb-4 md:mb-6">Delivery Areas</h2>
+            <p className="text-gray-700 max-w-2xl mx-auto mb-6 md:mb-8 text-sm md:text-base">
               We currently serve the following areas in Mumbai. If your area is not listed, contact us to check if we can accommodate your location.
             </p>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
-              <div className="bg-white p-4 rounded shadow-sm">Andheri East</div>
-              <div className="bg-white p-4 rounded shadow-sm">Andheri West</div>
-              <div className="bg-white p-4 rounded shadow-sm">Bandra East</div>
-              <div className="bg-white p-4 rounded shadow-sm">Bandra West</div>
-              <div className="bg-white p-4 rounded shadow-sm">Juhu</div>
-              <div className="bg-white p-4 rounded shadow-sm">Santacruz</div>
-              <div className="bg-white p-4 rounded shadow-sm">Vile Parle</div>
-              <div className="bg-white p-4 rounded shadow-sm">Powai</div>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 max-w-4xl mx-auto">
+              <div className="bg-white p-3 md:p-4 rounded shadow-sm text-sm md:text-base">Andheri East</div>
+              <div className="bg-white p-3 md:p-4 rounded shadow-sm text-sm md:text-base">Andheri West</div>
+              <div className="bg-white p-3 md:p-4 rounded shadow-sm text-sm md:text-base">Bandra East</div>
+              <div className="bg-white p-3 md:p-4 rounded shadow-sm text-sm md:text-base">Bandra West</div>
+              <div className="bg-white p-3 md:p-4 rounded shadow-sm text-sm md:text-base">Juhu</div>
+              <div className="bg-white p-3 md:p-4 rounded shadow-sm text-sm md:text-base">Santacruz</div>
+              <div className="bg-white p-3 md:p-4 rounded shadow-sm text-sm md:text-base">Vile Parle</div>
+              <div className="bg-white p-3 md:p-4 rounded shadow-sm text-sm md:text-base">Powai</div>
             </div>
           </div>
         </section>

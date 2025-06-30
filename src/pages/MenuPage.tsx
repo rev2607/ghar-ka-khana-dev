@@ -50,24 +50,24 @@ const MenuPage = () => {
     <div className="min-h-screen flex flex-col">
       <Navbar />
       <main className="flex-grow">
-        <section className="py-12" style={{ background: 'linear-gradient(to bottom, white 0%, #FFEFD6 100%)' }}>
+        <section className="py-8 md:py-12" style={{ background: 'linear-gradient(to bottom, white 0%, #FFEFD6 100%)' }}>
           <div className="container mx-auto px-4 text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-brand-brown mb-4">Our Menu</h1>
-            <p className="text-lg text-gray-700 max-w-2xl mx-auto">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-brown mb-3 md:mb-4">Our Menu</h1>
+            <p className="text-base md:text-lg text-gray-700 max-w-2xl mx-auto">
               Enjoy our delicious and affordable meal plans, prepared fresh daily with the best ingredients.
             </p>
           </div>
         </section>
 
-        <section className="py-16" style={{ background: 'linear-gradient(to bottom, #FFEFD6 0%, white 100%)' }}>
+        <section className="py-8 md:py-16" style={{ background: 'linear-gradient(to bottom, #FFEFD6 0%, white 100%)' }}>
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               {/* Menu Plans Grid */}
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 my-8">
+              <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-8 lg:gap-10 my-6 md:my-8">
                 {/* Veg Normal Plan */}
-                <div className="bg-white rounded-xl border border-black shadow-[0_2px_8px_rgba(0,0,0,0.12)] p-6 flex flex-col items-center">
-                  <h3 className="text-xl font-bold text-[#7C2D12] mb-2">(Veg Normal) <span className="font-normal">Rate 75/-</span></h3>
-                  <ul className="text-gray-800 text-base mb-4 text-left w-full max-w-xs space-y-2">
+                <div className="bg-white rounded-xl border border-black shadow-[0_2px_8px_rgba(0,0,0,0.12)] p-4 md:p-6 flex flex-col items-center">
+                  <h3 className="text-lg md:text-xl font-bold text-[#7C2D12] mb-2 text-center">(Veg Normal) <span className="font-normal">Rate 75/-</span></h3>
+                  <ul className="text-gray-800 text-sm md:text-base mb-4 text-left w-full max-w-xs space-y-2">
                     {[
                       '3 Chapathis',
                       'Rice',
@@ -76,13 +76,13 @@ const MenuPage = () => {
                       'Salad or Pickle or Papad',
                     ].map((item, idx) => (
                       <li key={idx} className="flex items-center gap-2">
-                        <img src={getMenuItemImage(item)} alt="" className="w-7 h-7 rounded object-cover border border-gray-200" />
+                        <img src={getMenuItemImage(item)} alt="" className="w-6 h-6 md:w-7 md:h-7 rounded object-cover border border-gray-200" />
                         <span>{item}</span>
                       </li>
                     ))}
                   </ul>
                   <div className="w-full max-w-xs mt-auto">
-                    <table className="w-full text-sm text-left border-t border-gray-200">
+                    <table className="w-full text-xs md:text-sm text-left border-t border-gray-200">
                       <tbody>
                         <tr>
                           <td className="font-semibold">Weekly</td>
@@ -97,9 +97,9 @@ const MenuPage = () => {
                   </div>
                 </div>
                 {/* Veg Special Plan */}
-                <div className="bg-white rounded-xl border border-black shadow-[0_2px_8px_rgba(0,0,0,0.12)] p-6 flex flex-col items-center">
-                  <h3 className="text-xl font-bold text-[#7C2D12] mb-2">(Veg Special) <span className="font-normal">Rate 85/-</span></h3>
-                  <ul className="text-gray-800 text-base mb-4 text-left w-full max-w-xs space-y-2">
+                <div className="bg-white rounded-xl border border-black shadow-[0_2px_8px_rgba(0,0,0,0.12)] p-4 md:p-6 flex flex-col items-center">
+                  <h3 className="text-lg md:text-xl font-bold text-[#7C2D12] mb-2 text-center">(Veg Special) <span className="font-normal">Rate 85/-</span></h3>
+                  <ul className="text-gray-800 text-sm md:text-base mb-4 text-left w-full max-w-xs space-y-2">
                     {[
                       '2 Chapathis + Special FlatBread',
                       'Rice',
@@ -110,13 +110,13 @@ const MenuPage = () => {
                       'Complimentary',
                     ].map((item, idx) => (
                       <li key={idx} className="flex items-center gap-2">
-                        <img src={getMenuItemImage(item)} alt="" className="w-7 h-7 rounded object-cover border border-gray-200" />
+                        <img src={getMenuItemImage(item)} alt="" className="w-6 h-6 md:w-7 md:h-7 rounded object-cover border border-gray-200" />
                         <span>{item}</span>
                       </li>
                     ))}
                   </ul>
                   <div className="w-full max-w-xs mt-auto">
-                    <table className="w-full text-sm text-left border-t border-gray-200">
+                    <table className="w-full text-xs md:text-sm text-left border-t border-gray-200">
                       <tbody>
                         <tr>
                           <td className="font-semibold">Weekly</td>
@@ -131,9 +131,9 @@ const MenuPage = () => {
                   </div>
                 </div>
                 {/* Chicken Meal Plan */}
-                <div className="bg-white rounded-xl border border-black shadow-[0_2px_8px_rgba(0,0,0,0.12)] p-6 flex flex-col items-center">
-                  <h3 className="text-xl font-bold text-[#7C2D12] mb-2">(Chicken Meal) <span className="font-normal">Rate 110/-</span></h3>
-                  <ul className="text-gray-800 text-base mb-4 text-left w-full max-w-xs space-y-2">
+                <div className="bg-white rounded-xl border border-black shadow-[0_2px_8px_rgba(0,0,0,0.12)] p-4 md:p-6 flex flex-col items-center">
+                  <h3 className="text-lg md:text-xl font-bold text-[#7C2D12] mb-2 text-center">(Chicken Meal) <span className="font-normal">Rate 110/-</span></h3>
+                  <ul className="text-gray-800 text-sm md:text-base mb-4 text-left w-full max-w-xs space-y-2">
                     {[
                       '3 Chapathis',
                       'Rice',
@@ -142,13 +142,13 @@ const MenuPage = () => {
                       'Complimentary',
                     ].map((item, idx) => (
                       <li key={idx} className="flex items-center gap-2">
-                        <img src={getMenuItemImage(item)} alt="" className="w-7 h-7 rounded object-cover border border-gray-200" />
+                        <img src={getMenuItemImage(item)} alt="" className="w-6 h-6 md:w-7 md:h-7 rounded object-cover border border-gray-200" />
                         <span className={item === 'Chicken Curry' ? 'text-red-600 font-bold' : ''}>{item}</span>
                       </li>
                     ))}
                   </ul>
                   <div className="w-full max-w-xs mt-auto">
-                    <table className="w-full text-sm text-left border-t border-gray-200">
+                    <table className="w-full text-xs md:text-sm text-left border-t border-gray-200">
                       <tbody>
                         <tr>
                           <td className="font-semibold">Weekly</td>
@@ -167,15 +167,15 @@ const MenuPage = () => {
           </div>
         </section>
 
-        <section className="py-16" style={{ background: 'linear-gradient(to bottom, white 0%, #FFEFD6 100%)' }}>
+        <section className="py-8 md:py-16" style={{ background: 'linear-gradient(to bottom, white 0%, #FFEFD6 100%)' }}>
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-brand-brown mb-6">Want to Order?</h2>
-            <p className="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-brand-brown mb-4 md:mb-6">Want to Order?</h2>
+            <p className="text-base md:text-lg text-gray-700 mb-6 md:mb-8 max-w-2xl mx-auto">
               Contact us to place your order and enjoy authentic home-style meals delivered fresh to your doorstep.
             </p>
             <a 
               href="/contact" 
-              className="bg-brand-orange text-white px-8 py-3 rounded-lg hover:bg-brand-brown transition-colors font-semibold inline-block"
+              className="bg-brand-orange text-white px-6 md:px-8 py-3 rounded-lg hover:bg-brand-brown transition-colors font-semibold inline-block"
             >
               Contact Us to Order
             </a>
