@@ -9,7 +9,7 @@ const TermsPage = () => {
       <main className="flex-grow">
         <section className="py-8 md:py-12" style={{ background: 'linear-gradient(to bottom, white 0%, #FFEFD6 100%)' }}>
           <div className="container mx-auto px-4 text-center">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-brown mb-3 md:mb-4">Before Ordering, Make a Note</h1>
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-brown mb-3 md:mb-4">Before Ordering, Make a Note:</h1>
             <p className="text-base md:text-lg text-gray-700 max-w-2xl mx-auto">
               Please read these important points carefully before using our services.
             </p>
@@ -30,12 +30,15 @@ const TermsPage = () => {
                   </div>
 
                   <div>
-                    <h2 className="text-xl md:text-2xl font-bold text-brand-brown mb-3">2. Subscription Plans Only</h2>
+                    <h2 className="text-xl md:text-2xl font-bold text-brand-brown mb-3">2. Available Plans & Pickup Option</h2>
                     <p className="text-gray-700 text-sm md:text-base leading-relaxed mb-3">
-                      We currently offer Weekly and Monthly tiffin subscription packages.
+                      Tiffin packages are available on a Weekly or Monthly subscription basis.
+                    </p>
+                    <p className="text-gray-700 text-sm md:text-base leading-relaxed mb-3">
+                      Takeaway — Customers may collect their tiffin directly from our Cloud Kitchen location.
                     </p>
                     <p className="text-gray-700 text-sm md:text-base leading-relaxed">
-                      <strong>Note:</strong> Daily order option will be available soon via platforms like Zomato and Swiggy.
+                      <strong>Note:</strong> Daily individual orders will soon be available via online platforms like Zomato and Swiggy.
                     </p>
                   </div>
 
