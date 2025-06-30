@@ -47,7 +47,7 @@ const Navbar = () => {
           <Link to="/" className={`text-[#222] text-lg font-medium hover:font-bold hover:text-[#F47A1F] transition-colors pb-1 ${isActive('/') ? 'border-b-2 border-orange-500' : ''}`}>Home</Link>
           <Link to="/about" className={`text-[#222] text-lg font-medium hover:font-bold hover:text-[#F47A1F] transition-colors pb-1 ${isActive('/about') ? 'border-b-2 border-orange-500' : ''}`}>About</Link>
           <Link to="/menu" className={`text-[#222] text-lg font-medium hover:font-bold hover:text-[#F47A1F] transition-colors pb-1 ${isActive('/menu') ? 'border-b-2 border-orange-500' : ''}`}>Menu</Link>
-          <Link to="/terms" className={`text-[#222] text-lg font-medium hover:font-bold hover:text-[#F47A1F] transition-colors pb-1 ${isActive('/terms') ? 'border-b-2 border-orange-500' : ''}`}>Terms</Link>
+          <Link to="/terms" className={`text-[#222] text-lg font-medium hover:font-bold hover:text-[#F47A1F] transition-colors pb-1 ${isActive('/terms') ? 'border-b-2 border-orange-500' : ''}`}>Before Ordering</Link>
           <Link to="/contact" className={`text-[#222] text-lg font-medium hover:font-bold hover:text-[#F47A1F] transition-colors pb-1 ${isActive('/contact') ? 'border-b-2 border-orange-500' : ''}`}>Contact</Link>
         </nav>
 
@@ -112,7 +112,7 @@ const Navbar = () => {
               onClick={() => setIsMobileMenuOpen(false)}
               className={`block px-3 py-2 text-base font-medium text-[#222] hover:text-[#F47A1F] hover:bg-gray-50 rounded-md pb-1 ${isActive('/terms') ? 'border-b-2 border-orange-500' : ''}`}
             >
-              Terms
+              Before Ordering
             </Link>
             <Link
               to="/contact"
