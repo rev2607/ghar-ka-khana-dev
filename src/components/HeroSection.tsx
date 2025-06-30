@@ -34,9 +34,6 @@ const HeroSection = () => {
             <p className="text-left text-[#444] text-base md:text-lg lg:text-xl mt-4 max-w-md mb-4 md:mb-0">
               Your Satisfaction, Our Highest Priority. Experience fresh, nutritious, and made with love - just like your mother's cooking.
             </p>
-            <div className="md:absolute md:top-0 md:left-[480px]">
-              <CustomerReviews />
-            </div>
           </div>
         </div>
         
@@ -50,7 +47,7 @@ const HeroSection = () => {
             <span className="block text-[#F47A1F]">Meals</span>
           </h1>
           {/* Delivery Image */}
-          <div className="w-full flex justify-center md:justify-end relative left-0 md:left-12 -top-0 md:-top-24">
+          <div className="w-full flex justify-center md:justify-end relative left-0 md:left-12 -top-0 md:-top-24 mb-6 md:mb-0">
             <img
               src="/delivery.png"
               alt="Delivery Woman Receiving Tiffin"

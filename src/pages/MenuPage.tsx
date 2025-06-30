@@ -66,14 +66,14 @@ const MenuPage = () => {
               <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-8 lg:gap-10 my-6 md:my-8">
                 {/* Veg Normal Plan */}
                 <div className="bg-white rounded-xl border border-black shadow-[0_2px_8px_rgba(0,0,0,0.12)] p-4 md:p-6 flex flex-col items-center">
-                  <h3 className="text-lg md:text-xl font-bold text-[#7C2D12] mb-2 text-center">(Veg Normal) <span className="font-normal">Rate 75/-</span></h3>
+                  <h3 className="text-lg md:text-xl font-bold text-green-600 mb-2 text-center">(Veg Normal) <span className="font-normal">Rate 75/-</span></h3>
                   <ul className="text-gray-800 text-sm md:text-base mb-4 text-left w-full max-w-xs space-y-2">
                     {[
                       '3 Chapathis',
                       'Rice',
                       '1 Bhaji',
                       '1 Dal/Dahi Kadi',
-                      'Salad or Pickle or Papad',
+                      'Salad / Pickle / Papad',
                     ].map((item, idx) => (
                       <li key={idx} className="flex items-center gap-2">
                         <img src={getMenuItemImage(item)} alt="" className="w-6 h-6 md:w-7 md:h-7 rounded object-cover border border-gray-200" />
@@ -98,15 +98,14 @@ const MenuPage = () => {
                 </div>
                 {/* Veg Special Plan */}
                 <div className="bg-white rounded-xl border border-black shadow-[0_2px_8px_rgba(0,0,0,0.12)] p-4 md:p-6 flex flex-col items-center">
-                  <h3 className="text-lg md:text-xl font-bold text-[#7C2D12] mb-2 text-center">(Veg Special) <span className="font-normal">Rate 85/-</span></h3>
+                  <h3 className="text-lg md:text-xl font-bold text-green-600 mb-2 text-center">(Veg Special) <span className="font-normal">Rate 85/-</span></h3>
                   <ul className="text-gray-800 text-sm md:text-base mb-4 text-left w-full max-w-xs space-y-2">
                     {[
                       '2 Chapathis + Special FlatBread',
                       'Rice',
                       '1 Bhaji',
                       '1 Dal/Dahi Kadi',
-                      'Salad',
-                      'Papad',
+                      'Salad / Pickle / Papad',
                       'Complimentary',
                     ].map((item, idx) => (
                       <li key={idx} className="flex items-center gap-2">
@@ -132,7 +131,7 @@ const MenuPage = () => {
                 </div>
                 {/* Chicken Meal Plan */}
                 <div className="bg-white rounded-xl border border-black shadow-[0_2px_8px_rgba(0,0,0,0.12)] p-4 md:p-6 flex flex-col items-center">
-                  <h3 className="text-lg md:text-xl font-bold text-[#7C2D12] mb-2 text-center">(Chicken Meal) <span className="font-normal">Rate 110/-</span></h3>
+                  <h3 className="text-lg md:text-xl font-bold text-red-600 mb-2 text-center">(Chicken Meal) <span className="font-normal">Rate 110/-</span></h3>
                   <ul className="text-gray-800 text-sm md:text-base mb-4 text-left w-full max-w-xs space-y-2">
                     {[
                       '3 Chapathis',

@@ -25,9 +25,10 @@ const Footer = () => {
           <div className="md:col-span-1">
             <h3 className="font-medium text-lg mb-4">Quick Links</h3>
             <ul className="space-y-2">
+              <li><Link to="/" className="text-gray-600 hover:text-brand-orange text-sm">Home</Link></li>
               <li><Link to="/about" className="text-gray-600 hover:text-brand-orange text-sm">About Us</Link></li>
-              <li><Link to="/menu" className="text-gray-600 hover:text-brand-orange text-sm">Our Menu</Link></li>
-              <li><Link to="/subscription" className="text-gray-600 hover:text-brand-orange text-sm">Subscription Plans</Link></li>
+              <li><Link to="/menu" className="text-gray-600 hover:text-brand-orange text-sm">Menu</Link></li>
+              <li><Link to="/terms" className="text-gray-600 hover:text-brand-orange text-sm">Terms and Conditions</Link></li>
               <li><Link to="/contact" className="text-gray-600 hover:text-brand-orange text-sm">Contact Us</Link></li>
             </ul>
           </div>
@@ -42,11 +43,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center text-gray-600 text-sm">
                 <Phone size={16} className="mr-2 text-brand-orange" />
-                +91 9000-000-000
-              </li>
-              <li className="flex items-center text-gray-600 text-sm">
-                <Mail size={16} className="mr-2 text-brand-orange" />
-                sample@email.com
+                +91 8108 325 444
               </li>
             </ul>
           </div>

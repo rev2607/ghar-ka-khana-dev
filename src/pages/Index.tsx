@@ -7,6 +7,10 @@ const Index = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
+      {/* Thin shadow effect below navbar */}
+      <div className="w-full h-[2px] -mb-[2px] z-20 relative">
+        <div className="w-full h-full mx-auto" style={{boxShadow: '0 6px 16px 0 rgba(0,0,0,0.18), 0 2px 4px 0 rgba(0,0,0,0.12)'}} />
+      </div>
       <main className="flex-grow">
         <HeroSection />
         <div style={{marginTop: '-32px'}} className="md:-mt-16">

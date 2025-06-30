@@ -131,17 +131,7 @@ const ContactPage = () => {
                     </div>
                     <div>
                       <h3 className="font-medium text-sm md:text-base">Phone</h3>
-                      <p className="text-gray-600 text-sm md:text-base">+91 9000-000-000</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start">
-                    <div className="bg-brand-lightOrange p-2 md:p-3 rounded-full mr-3 md:mr-4">
-                      <Mail className="text-brand-brown w-4 h-4 md:w-5 md:h-5" />
-                    </div>
-                    <div>
-                      <h3 className="font-medium text-sm md:text-base">Email</h3>
-                      <p className="text-gray-600 text-sm md:text-base">sample@email.com</p>
+                      <p className="text-gray-600 text-sm md:text-base">+91 8108 325 444</p>
                     </div>
                   </div>
                   
