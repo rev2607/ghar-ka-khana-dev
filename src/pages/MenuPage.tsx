@@ -248,6 +248,9 @@ const MenuPage = () => {
                   </div>
                 </div>
               </div>
+              <div className="text-center font-semibold text-lg text-red-700 my-6">
+                1 Time Refundable Security Deposit 299/- to be paid towards Tiffin Box
+              </div>
             </div>
           </div>
         </section>
