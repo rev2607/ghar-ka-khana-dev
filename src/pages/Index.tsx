@@ -2,6 +2,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import HeroSection from '@/components/HeroSection';
 import FeaturesSection from '@/components/FeaturesSection';
+import { Link } from 'react-router-dom';
 
 const Index = () => {
   return (
@@ -28,18 +29,18 @@ const Index = () => {
               Fresh ingredients, traditional recipes, and love in every bite.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
-              <a 
-                href="/menu" 
+              <Link 
+                to="/menu" 
                 className="bg-brand-orange text-white px-6 md:px-8 py-3 rounded-lg hover:bg-brand-brown transition-colors font-semibold"
               >
                 View Our Menu
-              </a>
-              <a 
-                href="/contact" 
+              </Link>
+              <Link 
+                to="/contact" 
                 className="border-2 border-brand-orange text-brand-orange px-6 md:px-8 py-3 rounded-lg hover:bg-brand-orange hover:text-white transition-colors font-semibold"
               >
                 Contact Us
-              </a>
+              </Link>
             </div>
           </div>
         </section>
