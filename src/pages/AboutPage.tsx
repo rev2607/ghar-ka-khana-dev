@@ -88,6 +88,36 @@ const AboutPage = () => {
           </div>
         </section>
 
+        <section className="py-8 md:py-16" style={{ background: 'linear-gradient(to bottom, #FFEFD6 0%, white 100%)' }}>
+          <div className="container mx-auto px-4">
+            <h2 className="text-2xl md:text-3xl font-bold text-brand-brown mb-6 md:mb-10 text-center">Holidays (No Service Days)</h2>
+            <div className="overflow-x-auto">
+              <table className="min-w-full border text-sm md:text-base mx-auto bg-white rounded-lg">
+                <thead>
+                  <tr className="bg-brand-brown text-white">
+                    <th className="p-2 border">Date</th>
+                    <th className="p-2 border">Day</th>
+                    <th className="p-2 border">Event</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td className="p-2 border">January 1</td><td className="p-2 border">Wednesday</td><td className="p-2 border">New Year</td></tr>
+                  <tr><td className="p-2 border">January 14</td><td className="p-2 border">Tuesday</td><td className="p-2 border">Sankranti</td></tr>
+                  <tr><td className="p-2 border">March 14</td><td className="p-2 border">Friday</td><td className="p-2 border">Holi</td></tr>
+                  <tr><td className="p-2 border">March 31</td><td className="p-2 border">Monday</td><td className="p-2 border">Id-Ul-Fitr</td></tr>
+                  <tr><td className="p-2 border">April 14</td><td className="p-2 border">Monday</td><td className="p-2 border">Ambedkar Jayanti</td></tr>
+                  <tr><td className="p-2 border">May 12</td><td className="p-2 border">Monday</td><td className="p-2 border">Buddha Purnima</td></tr>
+                  <tr><td className="p-2 border">August 9</td><td className="p-2 border">Saturday</td><td className="p-2 border">Raksha Bandhan</td></tr>
+                  <tr><td className="p-2 border">August 15</td><td className="p-2 border">Friday</td><td className="p-2 border font-bold">Independence Day</td></tr>
+                  <tr><td className="p-2 border">October 2</td><td className="p-2 border">Thursday</td><td className="p-2 border font-bold">Gandhi Jayanti</td></tr>
+                  <tr><td className="p-2 border">October 20</td><td className="p-2 border">Monday</td><td className="p-2 border">Diwali</td></tr>
+                  <tr><td className="p-2 border">Dec-25</td><td className="p-2 border">Thursday</td><td className="p-2 border">Christmas</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
         <section className="py-8 md:py-16 container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto">
             <h2 className="text-2xl md:text-3xl font-bold text-brand-brown mb-4 md:mb-6">Join Our Community</h2>

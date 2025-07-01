@@ -3,6 +3,19 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
+// Add custom style for no-spacing-table
+const noSpacingTableStyle = `
+  .no-spacing-table {
+    border-spacing: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .no-spacing-table td, .no-spacing-table tr, .no-spacing-table tbody {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+`;
+
 const MenuPage = () => {
   const menuItems = [
     {
@@ -33,132 +46,175 @@ const MenuPage = () => {
 
   // Helper to get image for each menu item
   const getMenuItemImage = (item) => {
-    if (item.toLowerCase().includes('dal') || item.toLowerCase().includes('kadi')) return '/dal.jpg';
-    if (item.toLowerCase().includes('rice')) return '/rice.jpg';
-    if (item.toLowerCase().includes('chapathi') || item.toLowerCase().includes('flatbread')) return '/chapathi.jpg';
-    if (item.toLowerCase().includes('bhaji')) return '/bhaji.jpg';
-    if (item.toLowerCase().includes('salad')) return '/salad.jpg';
-    if (item.toLowerCase().includes('sweets')) return '/sweets.jpg';
-    if (item.toLowerCase().includes('chicken curry')) return '/chicken.jpg';
-    if (item.toLowerCase().includes('papad')) return '/sweets.jpg';
-    if (item.toLowerCase().includes('pickle')) return '/sweets.jpg';
-    if (item.toLowerCase().includes('complimentary')) return '/sweets.jpg';
+    const lower = item.toLowerCase();
+    if (lower.includes('dal') || lower.includes('kadi')) return '/dal.jpg';
+    if (lower.includes('rice')) return '/rice.jpg';
+    if (lower.includes('chapathi') || lower.includes('chapathis') || lower.includes('flatbread') || lower.includes('puri')) return '/chapathi.jpg';
+    if (lower.includes('bhaji')) return '/bhaji.jpg';
+    if (lower.includes('aloo-kobi') || lower.includes('pattha kobi') || lower.includes('kobi')) return '/salad.jpg'; // Use salad.jpg as a placeholder for cabbage/cauliflower
+    if (lower.includes('salad') || lower.includes('salaad')) return '/salad.jpg';
+    if (lower.includes('sweets') || lower.includes('desert')) return '/sweets.jpg';
+    if (lower.includes('chicken masala') || lower.includes('chicken curry')) return '/chicken.jpg';
+    if (lower.includes('papad')) return '/salad.jpg';
+    if (lower.includes('pickle')) return '/salad.jpg';
+    if (lower.includes('complimentary')) return '/sweets.jpg';
     return '/sweets.jpg';
   };
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col" style={{ background: 'linear-gradient(to bottom, white 0%, #FFEFD6 100%)' }}>
       <Navbar />
       <main className="flex-grow">
-        <section className="py-8 md:py-12" style={{ background: 'linear-gradient(to bottom, white 0%, #FFEFD6 100%)' }}>
+        <section className="py-8 md:py-12">
           <div className="container mx-auto px-4 text-center">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-brown mb-3 md:mb-4">Our Menu</h1>
             <p className="text-base md:text-lg text-gray-700 max-w-2xl mx-auto">
               Enjoy our delicious and affordable meal plans, prepared fresh daily with the best ingredients.
             </p>
-          </div>
-        </section>
-
-        {/* Special Menu for July 1st */}
-        <section className="py-4 md:py-8">
-          <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto mb-8">
-              <h2 className="text-xl md:text-2xl font-bold text-brand-brown mb-2 text-center">Menu for July 1st - Lunch</h2>
-              <div className="overflow-x-auto">
-                <table className="w-full border text-sm md:text-base mb-6">
-                  <thead>
-                    <tr className="bg-green-700 text-white">
-                      <th className="p-2">Veg Normal</th>
-                      <th className="p-2 text-left bg-green-100 text-green-900" colSpan={2}>Chapathis, Rice, Special Bhaji, Daal Plain, Salaad/Papad/Pickle</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr className="bg-green-50">
-                      <td className="p-2 font-semibold text-green-800" colSpan={2}>Rate = 75/- for Tiffin Delivery Order<br/>Rate = 85/- for Take-away</td>
-                    </tr>
-                  </tbody>
-                  <thead>
-                    <tr className="bg-green-800 text-white">
-                      <th className="p-2">Veg Special</th>
-                      <th className="p-2 text-left bg-green-100 text-green-900" colSpan={2}>Chapathis + Puri, Rice, Special Bhaji, Daal Tadka, Salaad/Papad/Pickle, Desert/Sweets</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr className="bg-green-50">
-                      <td className="p-2 font-semibold text-green-800" colSpan={2}>Rate = 85/- for Tiffin Delivery Order<br/>Rate = 95/- for Take-away</td>
-                    </tr>
-                  </tbody>
-                  <thead>
-                    <tr className="bg-red-700 text-white">
-                      <th className="p-2">Non-Veg</th>
-                      <th className="p-2 text-left bg-orange-100 text-red-900" colSpan={2}>Chapathis, Rice, Chicken Masala, Salaad/Papad/Pickle</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr className="bg-orange-50">
-                      <td className="p-2 font-semibold text-red-800" colSpan={2}>Rate = 110/- for Tiffin Delivery Order<br/>Rate = 120/- for Take Away</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-            <div className="max-w-3xl mx-auto">
-              <h2 className="text-xl md:text-2xl font-bold text-brand-brown mb-2 text-center">Menu for July 1st - Dinner</h2>
-              <div className="overflow-x-auto">
-                <table className="w-full border text-sm md:text-base">
-                  <thead>
-                    <tr className="bg-green-700 text-white">
-                      <th className="p-2">Veg Normal</th>
-                      <th className="p-2 text-left bg-green-100 text-green-900" colSpan={2}>Chapathis, Rice, Shimla Mirch Singdana, Daal Plain, Salaad/Papad/Pickle</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr className="bg-green-50">
-                      <td className="p-2 font-semibold text-green-800" colSpan={2}>Rate = 75/- for Tiffin Delivery Order<br/>Rate = 85/- for Take-away</td>
-                    </tr>
-                  </tbody>
-                  <thead>
-                    <tr className="bg-green-800 text-white">
-                      <th className="p-2">Veg Special</th>
-                      <th className="p-2 text-left bg-green-100 text-green-900" colSpan={2}>Chapathis + Puri, Rice, Shimla Mirch Singdana, Daal Tadka, Salaad/Papad/Pickle, Desert/Sweets</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr className="bg-green-50">
-                      <td className="p-2 font-semibold text-green-800" colSpan={2}>Rate = 85/- for Tiffin Delivery Order<br/>Rate = 95/- for Take-away</td>
-                    </tr>
-                  </tbody>
-                  <thead>
-                    <tr className="bg-red-700 text-white">
-                      <th className="p-2">Non-Veg</th>
-                      <th className="p-2 text-left bg-orange-100 text-red-900" colSpan={2}>Chapathis, Rice, Chicken Masala, Salaad/Papad/Pickle</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr className="bg-orange-50">
-                      <td className="p-2 font-semibold text-red-800" colSpan={2}>Rate = 110/- for Tiffin Delivery Order<br/>Rate = 120/- for Take Away</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
+            <div className="text-center font-semibold text-lg text-red-700 my-6">
+              1 Time Refundable Security Deposit 299/- to be paid towards Tiffin Box
             </div>
           </div>
         </section>
 
-        <section className="py-8 md:py-16" style={{ background: 'linear-gradient(to bottom, white 0%, #FFEFD6 100%)' }}>
+        <section className="py-8 md:py-12">
           <div className="container mx-auto px-4">
+            <div className="mb-10">
+              <h2 className="text-2xl md:text-3xl font-bold text-brand-brown mb-6 text-center">Menu for July 2nd - Lunch</h2>
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8 max-w-5xl mx-auto">
+                {/* Veg Normal */}
+                <div className="bg-white rounded-xl border border-black shadow-[0_2px_8px_rgba(0,0,0,0.12)] p-4 md:p-6 flex flex-col items-center">
+                  <h3 className="text-lg md:text-xl font-bold text-green-600 mb-2 text-center">(Veg Normal)</h3>
+                  <ul className="text-gray-800 text-sm md:text-base mb-4 text-left w-full max-w-sm space-y-2">
+                    {['Chapathis', 'Rice', 'Aloo-Kobi Flower', 'Daal Plain', 'Salaad/Papad/Pickle'].map((item, idx) => (
+                      <li key={idx} className="flex items-center gap-2">
+                        <img src={getMenuItemImage(item)} alt="" className="w-6 h-6 md:w-7 md:h-7 rounded object-cover border border-gray-200" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="w-full max-w-xs mt-auto">
+                    <div className="text-xs md:text-sm text-left border-t border-gray-200 pt-2">
+                      <div><span className="font-semibold">Rate = 75/-</span> for Tiffin Delivery Order</div>
+                      <div><span className="font-semibold">Rate = 85/-</span> for Take-away</div>
+                    </div>
+                  </div>
+                </div>
+                {/* Veg Special */}
+                <div className="bg-white rounded-xl border border-black shadow-[0_2px_8px_rgba(0,0,0,0.12)] p-4 md:p-6 flex flex-col items-center">
+                  <h3 className="text-lg md:text-xl font-bold text-green-600 mb-2 text-center">(Veg Special)</h3>
+                  <ul className="text-gray-800 text-sm md:text-base mb-4 text-left w-full max-w-sm space-y-2">
+                    {['Chapathis + Puri', 'Rice', 'Aloo-Kobi Flower', 'Daal Tadka', 'Salaad/Papad/Pickle', 'Desert/Sweets'].map((item, idx) => (
+                      <li key={idx} className="flex items-center gap-2">
+                        <img src={getMenuItemImage(item)} alt="" className="w-6 h-6 md:w-7 md:h-7 rounded object-cover border border-gray-200" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="w-full max-w-xs mt-auto">
+                    <div className="text-xs md:text-sm text-left border-t border-gray-200 pt-2">
+                      <div><span className="font-semibold">Rate = 85/-</span> for Tiffin Delivery Order</div>
+                      <div><span className="font-semibold">Rate = 95/-</span> for Take-away</div>
+                    </div>
+                  </div>
+                </div>
+                {/* Chicken Meal */}
+                <div className="bg-white rounded-xl border border-black shadow-[0_2px_8px_rgba(0,0,0,0.12)] p-4 md:p-6 flex flex-col items-center">
+                  <h3 className="text-lg md:text-xl font-bold text-red-600 mb-2 text-center">(Chicken Meal)</h3>
+                  <ul className="text-gray-800 text-sm md:text-base mb-4 text-left w-full max-w-sm space-y-2">
+                    {['Chapathis', 'Rice', 'Chicken Masala', 'Salaad/Papad/Pickle'].map((item, idx) => (
+                      <li key={idx} className="flex items-center gap-2">
+                        <img src={getMenuItemImage(item)} alt="" className="w-6 h-6 md:w-7 md:h-7 rounded object-cover border border-gray-200" />
+                        <span className={item === 'Chicken Masala' ? 'text-red-600 font-bold' : ''}>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="w-full max-w-xs mt-auto">
+                    <div className="text-xs md:text-sm text-left border-t border-gray-200 pt-2">
+                      <div><span className="font-semibold">Rate = 110/-</span> for Tiffin Delivery Order</div>
+                      <div><span className="font-semibold">Rate = 120/-</span> for Take Away</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <h2 className="text-2xl md:text-3xl font-bold text-brand-brown mb-6 text-center">Menu for July 2nd - Dinner</h2>
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8 max-w-5xl mx-auto">
+                {/* Veg Normal */}
+                <div className="bg-white rounded-xl border border-black shadow-[0_2px_8px_rgba(0,0,0,0.12)] p-4 md:p-6 flex flex-col items-center">
+                  <h3 className="text-lg md:text-xl font-bold text-green-600 mb-2 text-center">(Veg Normal)</h3>
+                  <ul className="text-gray-800 text-sm md:text-base mb-4 text-left w-full max-w-sm space-y-2">
+                    {['Chapathis', 'Rice', 'Pattha Kobi', 'Daal Plain', 'Salaad/Papad/Pickle'].map((item, idx) => (
+                      <li key={idx} className="flex items-center gap-2">
+                        <img src={getMenuItemImage(item)} alt="" className="w-6 h-6 md:w-7 md:h-7 rounded object-cover border border-gray-200" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="w-full max-w-xs mt-auto">
+                    <div className="text-xs md:text-sm text-left border-t border-gray-200 pt-2">
+                      <div><span className="font-semibold">Rate = 75/-</span> for Tiffin Delivery Order</div>
+                      <div><span className="font-semibold">Rate = 85/-</span> for Take-away</div>
+                    </div>
+                  </div>
+                </div>
+                {/* Veg Special */}
+                <div className="bg-white rounded-xl border border-black shadow-[0_2px_8px_rgba(0,0,0,0.12)] p-4 md:p-6 flex flex-col items-center">
+                  <h3 className="text-lg md:text-xl font-bold text-green-600 mb-2 text-center">(Veg Special)</h3>
+                  <ul className="text-gray-800 text-sm md:text-base mb-4 text-left w-full max-w-sm space-y-2">
+                    {['Chapathis + Puri', 'Rice', 'Pattha Kobi', 'Daal Tadka', 'Salaad/Papad/Pickle', 'Desert/Sweets'].map((item, idx) => (
+                      <li key={idx} className="flex items-center gap-2">
+                        <img src={getMenuItemImage(item)} alt="" className="w-6 h-6 md:w-7 md:h-7 rounded object-cover border border-gray-200" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="w-full max-w-xs mt-auto">
+                    <div className="text-xs md:text-sm text-left border-t border-gray-200 pt-2">
+                      <div><span className="font-semibold">Rate = 85/-</span> for Tiffin Delivery Order</div>
+                      <div><span className="font-semibold">Rate = 95/-</span> for Take-away</div>
+                    </div>
+                  </div>
+                </div>
+                {/* Chicken Meal */}
+                <div className="bg-white rounded-xl border border-black shadow-[0_2px_8px_rgba(0,0,0,0.12)] p-4 md:p-6 flex flex-col items-center">
+                  <h3 className="text-lg md:text-xl font-bold text-red-600 mb-2 text-center">(Chicken Meal)</h3>
+                  <ul className="text-gray-800 text-sm md:text-base mb-4 text-left w-full max-w-sm space-y-2">
+                    {['Chapathis', 'Rice', 'Chicken Masala', 'Salaad/Papad/Pickle'].map((item, idx) => (
+                      <li key={idx} className="flex items-center gap-2">
+                        <img src={getMenuItemImage(item)} alt="" className="w-6 h-6 md:w-7 md:h-7 rounded object-cover border border-gray-200" />
+                        <span className={item === 'Chicken Masala' ? 'text-red-600 font-bold' : ''}>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="w-full max-w-xs mt-auto">
+                    <div className="text-xs md:text-sm text-left border-t border-gray-200 pt-2">
+                      <div><span className="font-semibold">Rate = 110/-</span> for Tiffin Delivery Order</div>
+                      <div><span className="font-semibold">Rate = 120/-</span> for Take Away</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-8 md:py-16">
+          <div className="container mx-auto px-4">
+            <h2 className="text-2xl md:text-3xl font-bold text-brand-brown mb-6 text-center">Our Plans</h2>
             <div className="max-w-6xl mx-auto">
               {/* Menu Plans Grid */}
               <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-8 lg:gap-10 my-6 md:my-8">
                 {/* Veg Normal Plan */}
                 <div className="bg-white rounded-xl border border-black shadow-[0_2px_8px_rgba(0,0,0,0.12)] p-4 md:p-6 flex flex-col items-center">
                   <h3 className="text-lg md:text-xl font-bold text-green-600 mb-2 text-center">(Veg Normal) <span className="font-normal">Rate 75/-</span></h3>
-                  <ul className="text-gray-800 text-sm md:text-base mb-4 text-left w-full max-w-xs space-y-2">
+                  <ul className="text-gray-800 text-sm md:text-base mb-4 text-left w-full max-w-sm space-y-2">
                     {[
-                      '3 Chapathis',
+                      'Chapathis',
                       'Rice',
-                      '1 Bhaji',
-                      '1 Dal/Dahi Kadi',
+                      'Bhaji',
+                      'Dal/Dahi Kadi',
                       'Salad / Pickle / Papad',
                     ].map((item, idx) => (
                       <li key={idx} className="flex items-center gap-2">
@@ -168,13 +224,13 @@ const MenuPage = () => {
                     ))}
                   </ul>
                   <div className="w-full max-w-xs mt-auto">
-                    <table className="w-full text-xs md:text-sm text-left border-t border-gray-200">
+                    <table className="w-full text-xs md:text-sm text-left border-t border-gray-200 no-spacing-table">
                       <tbody>
                         <tr>
                           <td className="font-semibold">Weekly</td>
                           <td>354/- 1st week, then 450/-</td>
                         </tr>
-                        <tr>
+                        <tr className="align-top">
                           <td className="font-semibold">Monthly</td>
                           <td>1950/-</td>
                         </tr>
@@ -185,12 +241,12 @@ const MenuPage = () => {
                 {/* Veg Special Plan */}
                 <div className="bg-white rounded-xl border border-black shadow-[0_2px_8px_rgba(0,0,0,0.12)] p-4 md:p-6 flex flex-col items-center">
                   <h3 className="text-lg md:text-xl font-bold text-green-600 mb-2 text-center">(Veg Special) <span className="font-normal">Rate 85/-</span></h3>
-                  <ul className="text-gray-800 text-sm md:text-base mb-4 text-left w-full max-w-xs space-y-2">
+                  <ul className="text-gray-800 text-sm md:text-base mb-4 text-left w-full max-w-sm space-y-2">
                     {[
-                      '2 Chapathis + Special FlatBread',
+                      'Chapathis + Special FlatBread',
                       'Rice',
-                      '1 Bhaji',
-                      '1 Dal/Dahi Kadi',
+                      'Bhaji',
+                      'Dal/Dahi Kadi',
                       'Salad / Pickle / Papad',
                       'Complimentary',
                     ].map((item, idx) => (
@@ -201,13 +257,13 @@ const MenuPage = () => {
                     ))}
                   </ul>
                   <div className="w-full max-w-xs mt-auto">
-                    <table className="w-full text-xs md:text-sm text-left border-t border-gray-200">
+                    <table className="w-full text-xs md:text-sm text-left border-t border-gray-200 no-spacing-table">
                       <tbody>
                         <tr>
                           <td className="font-semibold">Weekly</td>
                           <td>510/-</td>
                         </tr>
-                        <tr>
+                        <tr className="align-top">
                           <td className="font-semibold">Monthly</td>
                           <td>2210/-</td>
                         </tr>
@@ -218,9 +274,9 @@ const MenuPage = () => {
                 {/* Chicken Meal Plan */}
                 <div className="bg-white rounded-xl border border-black shadow-[0_2px_8px_rgba(0,0,0,0.12)] p-4 md:p-6 flex flex-col items-center">
                   <h3 className="text-lg md:text-xl font-bold text-red-600 mb-2 text-center">(Chicken Meal) <span className="font-normal">Rate 110/-</span></h3>
-                  <ul className="text-gray-800 text-sm md:text-base mb-4 text-left w-full max-w-xs space-y-2">
+                  <ul className="text-gray-800 text-sm md:text-base mb-4 text-left w-full max-w-sm space-y-2">
                     {[
-                      '3 Chapathis',
+                      'Chapathis',
                       'Rice',
                       'Chicken Curry',
                       'Salad',
@@ -233,13 +289,13 @@ const MenuPage = () => {
                     ))}
                   </ul>
                   <div className="w-full max-w-xs mt-auto">
-                    <table className="w-full text-xs md:text-sm text-left border-t border-gray-200">
+                    <table className="w-full text-xs md:text-sm text-left border-t border-gray-200 no-spacing-table">
                       <tbody>
                         <tr>
                           <td className="font-semibold">Weekly</td>
                           <td>660/-</td>
                         </tr>
-                        <tr>
+                        <tr className="align-top">
                           <td className="font-semibold">Monthly</td>
                           <td>2860/-</td>
                         </tr>
@@ -248,14 +304,11 @@ const MenuPage = () => {
                   </div>
                 </div>
               </div>
-              <div className="text-center font-semibold text-lg text-red-700 my-6">
-                1 Time Refundable Security Deposit 299/- to be paid towards Tiffin Box
-              </div>
             </div>
           </div>
         </section>
 
-        <section className="py-8 md:py-16" style={{ background: 'linear-gradient(to bottom, white 0%, #FFEFD6 100%)' }}>
+        <section className="py-8 md:py-16">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-brand-brown mb-4 md:mb-6">Want to Order?</h2>
             <p className="text-base md:text-lg text-gray-700 mb-6 md:mb-8 max-w-2xl mx-auto">
@@ -271,6 +324,7 @@ const MenuPage = () => {
         </section>
       </main>
       <Footer />
+      <style>{noSpacingTableStyle}</style>
     </div>
   );
 };
