@@ -1,5 +1,6 @@
 import React from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { CardTitle, CardDescription } from '@/components/ui/card';
+import { motion } from 'framer-motion';
 
 const features = [
   {
@@ -8,19 +9,16 @@ const features = [
     icon: "🚚"
   },
   {
-    title: "Quality Guaranteed",
-    description: "Every meal is carefully prepared with handpicked ingredients, ensuring consistent quality and taste.",
-    icon: "🛡️"
+    title: "Quality You Can Trust",
+    description: "Every meal is prepared with handpicked ingredients and cooked in premium Saffola oil — never reused or low-grade — ensuring consistent taste, health, and quality.",
+    icon: (
+      <img src="/oil.png" alt="Quality Oil" style={{ width: '2.2em', height: '2.2em', objectFit: 'contain', display: 'inline-block' }} />
+    )
   },
   {
     title: "Sanitized Cooking Practices",
     description: "We follow strict hygiene protocols in our kitchen — everything is sanitized daily for your safety.",
     icon: "🧼"
-  },
-  {
-    title: "Quality Oil Used",
-    description: "We cook using premium oils only — no reused or low-grade oils, ensuring better health and taste.",
-    icon: "🥥"
   }
 ];
 
@@ -34,16 +32,28 @@ const FeaturesSection = () => {
             We're not just another food delivery service. We bring home-cooked meals made with love and care directly to your doorstep.
           </p>
         </div>
-        
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-10 my-6 md:my-8">
-          {features.map((feature, index) => (
-            <Card key={index} className="bg-white p-4 md:p-6 lg:p-8 rounded-xl shadow-[0_2px_8px_rgba(0,0,0,0.12)] border border-black flex flex-row items-start gap-3 md:gap-6 hover:shadow-lg transition-shadow">
-              <div className="text-2xl md:text-3xl lg:text-4xl mr-1 md:mr-2 mt-1">{feature.icon}</div>
-              <div>
-                <CardTitle className="text-base md:text-lg font-bold text-[#7C2D12] mb-1">{feature.title}</CardTitle>
-                <CardDescription className="text-sm md:text-base text-[#374151]">{feature.description}</CardDescription>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 my-8">
+          {features.map((feature, idx) => (
+            <motion.div
+              key={idx}
+              className="relative bg-white rounded-xl shadow-lg p-6 pt-12 text-center border border-gray-200"
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.6, delay: idx * 0.2 }}
+            >
+              <div className="absolute -top-8 left-1/2 transform -translate-x-1/2">
+                <div className="w-16 h-16 rounded-full flex items-center justify-center bg-orange-100 border-4 border-white shadow">
+                  {typeof feature.icon === 'string' ? (
+                    <span className="text-3xl">{feature.icon}</span>
+                  ) : (
+                    feature.icon
+                  )}
+                </div>
               </div>
-            </Card>
+              <h3 className="mt-4 text-lg font-bold text-[#7C2D12]">{feature.title}</h3>
+              <p className="mt-2 text-gray-700 text-sm">{feature.description}</p>
+            </motion.div>
           ))}
         </div>
       </div>
