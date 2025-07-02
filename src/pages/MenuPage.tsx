@@ -71,9 +71,6 @@ const MenuPage = () => {
             <p className="text-base md:text-lg text-gray-700 max-w-2xl mx-auto">
               Enjoy our delicious and affordable meal plans, prepared fresh daily with the best ingredients.
             </p>
-            <div className="text-center font-semibold text-lg text-red-700 my-6">
-              1 Time Refundable Security Deposit 299/- to be paid towards Tiffin Box
-            </div>
           </div>
         </section>
 
@@ -200,6 +197,10 @@ const MenuPage = () => {
           </div>
         </section>
 
+        <div className="text-center font-semibold text-lg text-red-700 my-6">
+          1 Time Refundable Security Deposit 299/- to be paid towards Tiffin Box
+        </div>
+
         <section className="py-8 md:py-16">
           <div className="container mx-auto px-4">
             <h2 className="text-2xl md:text-3xl font-bold text-brand-brown mb-6 text-center">Our Plans</h2>
@@ -226,13 +227,13 @@ const MenuPage = () => {
                   <div className="w-full max-w-xs mt-auto">
                     <table className="w-full text-xs md:text-sm text-left border-t border-gray-200 no-spacing-table">
                       <tbody>
-                        <tr>
-                          <td className="font-semibold">Weekly</td>
-                          <td>354/- 1st week, then 450/-</td>
+                        <tr className="align-top p-0">
+                          <td className="font-semibold p-0 align-top">Weekly</td>
+                          <td className="p-0 align-top">354/- 1st week, then 450/-</td>
                         </tr>
-                        <tr className="align-top">
-                          <td className="font-semibold">Monthly</td>
-                          <td>1950/-</td>
+                        <tr className="align-top p-0">
+                          <td className="font-semibold p-0 align-top">Monthly</td>
+                          <td className="p-0 align-top">1950/-</td>
                         </tr>
                       </tbody>
                     </table>
@@ -259,13 +260,13 @@ const MenuPage = () => {
                   <div className="w-full max-w-xs mt-auto">
                     <table className="w-full text-xs md:text-sm text-left border-t border-gray-200 no-spacing-table">
                       <tbody>
-                        <tr>
-                          <td className="font-semibold">Weekly</td>
-                          <td>510/-</td>
+                        <tr className="align-top p-0">
+                          <td className="font-semibold p-0 align-top">Weekly</td>
+                          <td className="p-0 align-top">510/-</td>
                         </tr>
-                        <tr className="align-top">
-                          <td className="font-semibold">Monthly</td>
-                          <td>2210/-</td>
+                        <tr className="align-top p-0">
+                          <td className="font-semibold p-0 align-top">Monthly</td>
+                          <td className="p-0 align-top">2210/-</td>
                         </tr>
                       </tbody>
                     </table>
@@ -291,13 +292,13 @@ const MenuPage = () => {
                   <div className="w-full max-w-xs mt-auto">
                     <table className="w-full text-xs md:text-sm text-left border-t border-gray-200 no-spacing-table">
                       <tbody>
-                        <tr>
-                          <td className="font-semibold">Weekly</td>
-                          <td>660/-</td>
+                        <tr className="align-top p-0">
+                          <td className="font-semibold p-0 align-top">Weekly</td>
+                          <td className="p-0 align-top">660/-</td>
                         </tr>
-                        <tr className="align-top">
-                          <td className="font-semibold">Monthly</td>
-                          <td>2860/-</td>
+                        <tr className="align-top p-0">
+                          <td className="font-semibold p-0 align-top">Monthly</td>
+                          <td className="p-0 align-top">2860/-</td>
                         </tr>
                       </tbody>
                     </table>
