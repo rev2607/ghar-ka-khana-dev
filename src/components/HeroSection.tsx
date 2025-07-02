@@ -1,10 +1,11 @@
 import CustomerReviews from './CustomerReviews';
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const HeroSection = () => {
   return (
     <section className="w-full pt-8 md:pt-16 pb-8 bg-gradient-to-b from-[#FFD9A0] to-white overflow-hidden">
-      <div className="max-w-[1400px] mx-auto flex flex-col lg:flex-row items-start justify-center gap-6 md:gap-10 px-4 md:px-8">
+      <div className="max-w-[1400px] mx-auto flex flex-col lg:flex-row items-start justify-center gap-6 md:gap-10 lg:gap-x-20 px-4 md:px-8">
         
         {/* Left Column: Food Image and Sub-headline */}
         <div className="flex flex-col items-start flex-1 flex-shrink-0 -ml-0 md:-ml-8 order-1 lg:order-1">
@@ -13,27 +14,37 @@ const HeroSection = () => {
             <img
               src="/food.png"
               alt="Food Tray"
-              className="w-full max-w-[1300px] h-auto object-contain -rotate-0 md:-rotate-6"
+              className="w-full max-w-[1600px] h-auto object-contain -rotate-0 md:-rotate-6"
             />
-            {/* Offer Price Badge */}
-            <div
-              className="absolute top-0 right-8 md:right-16 w-32 h-32 md:w-44 md:h-44 lg:w-48 lg:h-48 rounded-full flex flex-col items-center justify-center text-center z-10"
-              style={{
-                background: 'linear-gradient(135deg, #F47A1F 0%,rgb(202, 106, 28) 100%)',
-                fontWeight: 600,
-              }}
+            {/* Offer Price Glassmorphism Card */}
+            <motion.div
+              className="absolute top-0 right-8 md:right-16 flex flex-col items-center justify-center text-center z-10 px-8 py-6 rounded-2xl border border-orange-300 shadow-xl backdrop-blur-md bg-white/60"
+              initial={{ scale: 0.95, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 0.6, type: 'spring' }}
+              whileHover={{ scale: 1.05 }}
+              style={{ minWidth: '8rem', minHeight: '8rem' }}
             >
-              <span className="text-white text-sm md:text-lg lg:text-xl font-semibold leading-tight">Introductory</span>
-              <span className="text-white text-xs md:text-base lg:text-lg font-semibold leading-tight mt-1">Offer Price</span>
-              <span className="text-white text-2xl md:text-4xl lg:text-5xl font-bold leading-tight">59/-</span>
-              <span className="text-white text-xs md:text-base lg:text-lg leading-tight">per meal*</span>
-            </div>
+              <span className="text-orange-700 text-sm md:text-lg lg:text-xl font-semibold leading-tight">Introductory</span>
+              <span className="text-orange-900 text-xs md:text-base lg:text-lg font-semibold leading-tight mt-1">Offer Price</span>
+              <span className="text-orange-600 text-2xl md:text-4xl lg:text-5xl font-bold leading-tight">59/-</span>
+              <span className="text-orange-800 text-xs md:text-base lg:text-lg leading-tight">per meal*</span>
+            </motion.div>
           </div>
-          {/* Sub-headline and Reviews below food */}
-          <div className="w-full mt-4 md:mt-8 relative h-auto md:h-48">
-            <p className="text-left text-[#444] text-base md:text-lg lg:text-xl mt-4 max-w-md mb-4 md:mb-0">
-              Your Satisfaction, Our Highest Priority. Experience fresh, nutritious, and made with love - just like your mother's cooking.
-            </p>
+          {/* Why Choose Title and Description */}
+          <div className="w-full mt-6 md:mt-10 mb-2 md:mb-4 mx-auto">
+            <style>{`
+              @media (min-width: 1024px) {
+                .why-choose-block { max-width: 520px; }
+              }
+            `}</style>
+            <h2 className="why-choose-block text-2xl md:text-3xl lg:text-4xl font-bold mb-2 md:mb-3 text-left text-[#723303] whitespace-nowrap">Why Choose Neelam's Ghar-Ka-Khana?</h2>
+            <div className="why-choose-block text-gray-700 max-w-4xl text-base md:text-lg text-left">
+              <p>
+                We're more than just a food service — we deliver fresh, nutritious meals made with love, just like your mother's cooking,<br />
+                right to your doorstep.
+              </p>
+            </div>
           </div>
         </div>
         
@@ -47,7 +58,7 @@ const HeroSection = () => {
             <span className="block text-[#F47A1F]">Meals</span>
           </h1>
           {/* Delivery Image */}
-          <div className="w-full flex justify-center md:justify-end relative left-0 md:left-12 -top-0 md:-top-24 mb-6 md:mb-0">
+          <div className="w-full flex justify-center md:justify-end relative left-0 md:left-4 -top-0 md:-top-24 mb-6 md:mb-0">
             <img
               src="/delivery.png"
               alt="Delivery Woman Receiving Tiffin"

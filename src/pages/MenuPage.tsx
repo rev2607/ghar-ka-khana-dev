@@ -77,13 +77,13 @@ const MenuPage = () => {
         <section className="py-8 md:py-12">
           <div className="container mx-auto px-4">
             <div className="mb-10">
-              <h2 className="text-2xl md:text-3xl font-bold text-brand-brown mb-6 text-center">Menu for July 2nd - Lunch</h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-brand-brown mb-6 text-center">Menu for July 3rd - Lunch</h2>
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8 max-w-5xl mx-auto">
                 {/* Veg Normal */}
                 <div className="bg-white rounded-xl border border-black shadow-[0_2px_8px_rgba(0,0,0,0.12)] p-4 md:p-6 flex flex-col items-center">
                   <h3 className="text-lg md:text-xl font-bold text-green-600 mb-2 text-center">(Veg Normal)</h3>
                   <ul className="text-gray-800 text-sm md:text-base mb-4 text-left w-full max-w-sm space-y-2">
-                    {['Chapathis', 'Rice', 'Aloo-Kobi Flower', 'Daal Plain', 'Salaad/Papad/Pickle'].map((item, idx) => (
+                    {['Chapathis', 'Rice', 'Shimla-Mirchi Singdana', 'Daal Plain', 'Salaad/Papad/Pickle'].map((item, idx) => (
                       <li key={idx} className="flex items-center gap-2">
                         <img src={getMenuItemImage(item)} alt="" className="w-6 h-6 md:w-7 md:h-7 rounded object-cover border border-gray-200" />
                         <span>{item}</span>
@@ -101,7 +101,7 @@ const MenuPage = () => {
                 <div className="bg-white rounded-xl border border-black shadow-[0_2px_8px_rgba(0,0,0,0.12)] p-4 md:p-6 flex flex-col items-center">
                   <h3 className="text-lg md:text-xl font-bold text-green-600 mb-2 text-center">(Veg Special)</h3>
                   <ul className="text-gray-800 text-sm md:text-base mb-4 text-left w-full max-w-sm space-y-2">
-                    {['Chapathis + Puri', 'Rice', 'Aloo-Kobi Flower', 'Daal Tadka', 'Salaad/Papad/Pickle', 'Desert/Sweets'].map((item, idx) => (
+                    {['Chapathis + Puri', 'Rice', 'Shimla-Mirchi Singdana', 'Daal Tadka', 'Salaad/Papad/Pickle', 'Desert/Sweets'].map((item, idx) => (
                       <li key={idx} className="flex items-center gap-2">
                         <img src={getMenuItemImage(item)} alt="" className="w-6 h-6 md:w-7 md:h-7 rounded object-cover border border-gray-200" />
                         <span>{item}</span>
@@ -136,13 +136,13 @@ const MenuPage = () => {
               </div>
             </div>
             <div>
-              <h2 className="text-2xl md:text-3xl font-bold text-brand-brown mb-6 text-center">Menu for July 2nd - Dinner</h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-brand-brown mb-6 text-center">Menu for July 3rd - Dinner</h2>
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8 max-w-5xl mx-auto">
                 {/* Veg Normal */}
                 <div className="bg-white rounded-xl border border-black shadow-[0_2px_8px_rgba(0,0,0,0.12)] p-4 md:p-6 flex flex-col items-center">
                   <h3 className="text-lg md:text-xl font-bold text-green-600 mb-2 text-center">(Veg Normal)</h3>
                   <ul className="text-gray-800 text-sm md:text-base mb-4 text-left w-full max-w-sm space-y-2">
-                    {['Chapathis', 'Rice', 'Pattha Kobi', 'Daal Plain', 'Salaad/Papad/Pickle'].map((item, idx) => (
+                    {['Chapathis', 'Rice', 'Methi Singdana', 'Daal Plain', 'Salaad/Papad/Pickle'].map((item, idx) => (
                       <li key={idx} className="flex items-center gap-2">
                         <img src={getMenuItemImage(item)} alt="" className="w-6 h-6 md:w-7 md:h-7 rounded object-cover border border-gray-200" />
                         <span>{item}</span>
@@ -160,7 +160,7 @@ const MenuPage = () => {
                 <div className="bg-white rounded-xl border border-black shadow-[0_2px_8px_rgba(0,0,0,0.12)] p-4 md:p-6 flex flex-col items-center">
                   <h3 className="text-lg md:text-xl font-bold text-green-600 mb-2 text-center">(Veg Special)</h3>
                   <ul className="text-gray-800 text-sm md:text-base mb-4 text-left w-full max-w-sm space-y-2">
-                    {['Chapathis + Puri', 'Rice', 'Pattha Kobi', 'Daal Tadka', 'Salaad/Papad/Pickle', 'Desert/Sweets'].map((item, idx) => (
+                    {['Chapathis + Puri', 'Rice', 'Methi Singdana', 'Daal Tadka', 'Salaad/Papad/Pickle', 'Desert/Sweets'].map((item, idx) => (
                       <li key={idx} className="flex items-center gap-2">
                         <img src={getMenuItemImage(item)} alt="" className="w-6 h-6 md:w-7 md:h-7 rounded object-cover border border-gray-200" />
                         <span>{item}</span>

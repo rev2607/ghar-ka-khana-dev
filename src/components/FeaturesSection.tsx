@@ -26,12 +26,6 @@ const FeaturesSection = () => {
   return (
     <section className="pt-0 pb-0 bg-transparent">
       <div className="container mx-auto px-4 md:px-0 mt-0 pt-0">
-        <div className="text-center mb-0">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-3 md:mb-4">Why Choose Neelam's Ghar-Ka-Khana?</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto text-sm md:text-base px-4 md:px-0">
-            We're not just another food delivery service. We bring home-cooked meals made with love and care directly to your doorstep.
-          </p>
-        </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 my-8">
           {features.map((feature, idx) => (
             <motion.div
