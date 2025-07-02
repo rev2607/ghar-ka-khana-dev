@@ -31,8 +31,8 @@ const HeroSection = () => {
               <span className="text-orange-800 text-xs md:text-base lg:text-lg leading-tight">per meal*</span>
             </motion.div>
           </div>
-          {/* Why Choose Title and Description */}
-          <div className="w-full mt-6 md:mt-10 mb-2 md:mb-4 mx-auto">
+          {/* Desktop: Why Choose block in original place */}
+          <div className="w-full mt-6 md:mt-10 mb-2 md:mb-4 mx-auto hidden md:block">
             <style>{`
               @media (min-width: 1024px) {
                 .why-choose-block { max-width: 520px; }
@@ -41,8 +41,8 @@ const HeroSection = () => {
             <h2 className="why-choose-block text-2xl md:text-3xl lg:text-4xl font-bold mb-2 md:mb-3 text-left text-[#723303] whitespace-nowrap">Why Choose Neelam's Ghar-Ka-Khana?</h2>
             <div className="why-choose-block text-gray-700 max-w-4xl text-base md:text-lg text-left">
               <p>
-                We're more than just a food service — we deliver fresh, nutritious meals made with love, just like your mother's cooking,<br />
-                right to your doorstep.
+                We're more than just a food service — we deliver fresh,<br />
+                nutritious meals made with love, just like your mother's cooking, right to your doorstep.
               </p>
             </div>
           </div>
@@ -64,6 +64,16 @@ const HeroSection = () => {
               alt="Delivery Woman Receiving Tiffin"
               className="w-full max-w-[300px] md:max-w-[480px] rounded-2xl object-cover shadow-lg"
             />
+          </div>
+          {/* Mobile: Why Choose block after delivery image */}
+          <div className="block md:hidden w-full mt-4 mb-2 mx-auto">
+            <h2 className="why-choose-block text-2xl font-bold mb-2 text-left text-[#723303] whitespace-nowrap">Why Choose Neelam's Ghar-Ka-Khana?</h2>
+            <div className="why-choose-block text-gray-700 max-w-4xl text-base text-left">
+              <p>
+                We deliver fresh, nutritious meals made with love —<br />
+                just like your mother's cooking, delivered to your doorstep.
+              </p>
+            </div>
           </div>
         </div>
 
