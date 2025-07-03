@@ -74,133 +74,6 @@ const MenuPage = () => {
           </div>
         </section>
 
-        <section className="py-8 md:py-12">
-          <div className="container mx-auto px-4">
-            <div className="mb-10">
-              <h2 className="text-2xl md:text-3xl font-bold text-brand-brown mb-6 text-center">Menu for July 3rd - Lunch</h2>
-              <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8 max-w-5xl mx-auto">
-                {/* Veg Normal */}
-                <div className="bg-white rounded-xl border border-black shadow-[0_2px_8px_rgba(0,0,0,0.12)] p-4 md:p-6 flex flex-col items-center">
-                  <h3 className="text-lg md:text-xl font-bold text-green-600 mb-2 text-center">(Veg Normal)</h3>
-                  <ul className="text-gray-800 text-sm md:text-base mb-4 text-left w-full max-w-sm space-y-2">
-                    {['Chapathis', 'Rice', 'Shimla-Mirchi Singdana', 'Daal Plain', 'Salaad/Papad/Pickle'].map((item, idx) => (
-                      <li key={idx} className="flex items-center gap-2">
-                        <img src={getMenuItemImage(item)} alt="" className="w-6 h-6 md:w-7 md:h-7 rounded object-cover border border-gray-200" />
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <div className="w-full max-w-xs mt-auto">
-                    <div className="text-xs md:text-sm text-left border-t border-gray-200 pt-2">
-                      <div><span className="font-semibold">Rate = 75/-</span> for Tiffin Delivery Order</div>
-                      <div><span className="font-semibold">Rate = 85/-</span> for Take-away</div>
-                    </div>
-                  </div>
-                </div>
-                {/* Veg Special */}
-                <div className="bg-white rounded-xl border border-black shadow-[0_2px_8px_rgba(0,0,0,0.12)] p-4 md:p-6 flex flex-col items-center">
-                  <h3 className="text-lg md:text-xl font-bold text-green-600 mb-2 text-center">(Veg Special)</h3>
-                  <ul className="text-gray-800 text-sm md:text-base mb-4 text-left w-full max-w-sm space-y-2">
-                    {['Chapathis + Puri', 'Rice', 'Shimla-Mirchi Singdana', 'Daal Tadka', 'Salaad/Papad/Pickle', 'Desert/Sweets'].map((item, idx) => (
-                      <li key={idx} className="flex items-center gap-2">
-                        <img src={getMenuItemImage(item)} alt="" className="w-6 h-6 md:w-7 md:h-7 rounded object-cover border border-gray-200" />
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <div className="w-full max-w-xs mt-auto">
-                    <div className="text-xs md:text-sm text-left border-t border-gray-200 pt-2">
-                      <div><span className="font-semibold">Rate = 85/-</span> for Tiffin Delivery Order</div>
-                      <div><span className="font-semibold">Rate = 95/-</span> for Take-away</div>
-                    </div>
-                  </div>
-                </div>
-                {/* Chicken Meal */}
-                <div className="bg-white rounded-xl border border-black shadow-[0_2px_8px_rgba(0,0,0,0.12)] p-4 md:p-6 flex flex-col items-center">
-                  <h3 className="text-lg md:text-xl font-bold text-red-600 mb-2 text-center">(Chicken Meal)</h3>
-                  <ul className="text-gray-800 text-sm md:text-base mb-4 text-left w-full max-w-sm space-y-2">
-                    {['Chapathis', 'Rice', 'Chicken Masala', 'Salaad/Papad/Pickle'].map((item, idx) => (
-                      <li key={idx} className="flex items-center gap-2">
-                        <img src={getMenuItemImage(item)} alt="" className="w-6 h-6 md:w-7 md:h-7 rounded object-cover border border-gray-200" />
-                        <span className={item === 'Chicken Masala' ? 'text-red-600 font-bold' : ''}>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <div className="w-full max-w-xs mt-auto">
-                    <div className="text-xs md:text-sm text-left border-t border-gray-200 pt-2">
-                      <div><span className="font-semibold">Rate = 110/-</span> for Tiffin Delivery Order</div>
-                      <div><span className="font-semibold">Rate = 120/-</span> for Take Away</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div>
-              <h2 className="text-2xl md:text-3xl font-bold text-brand-brown mb-6 text-center">Menu for July 3rd - Dinner</h2>
-              <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8 max-w-5xl mx-auto">
-                {/* Veg Normal */}
-                <div className="bg-white rounded-xl border border-black shadow-[0_2px_8px_rgba(0,0,0,0.12)] p-4 md:p-6 flex flex-col items-center">
-                  <h3 className="text-lg md:text-xl font-bold text-green-600 mb-2 text-center">(Veg Normal)</h3>
-                  <ul className="text-gray-800 text-sm md:text-base mb-4 text-left w-full max-w-sm space-y-2">
-                    {['Chapathis', 'Rice', 'Methi Singdana', 'Daal Plain', 'Salaad/Papad/Pickle'].map((item, idx) => (
-                      <li key={idx} className="flex items-center gap-2">
-                        <img src={getMenuItemImage(item)} alt="" className="w-6 h-6 md:w-7 md:h-7 rounded object-cover border border-gray-200" />
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <div className="w-full max-w-xs mt-auto">
-                    <div className="text-xs md:text-sm text-left border-t border-gray-200 pt-2">
-                      <div><span className="font-semibold">Rate = 75/-</span> for Tiffin Delivery Order</div>
-                      <div><span className="font-semibold">Rate = 85/-</span> for Take-away</div>
-                    </div>
-                  </div>
-                </div>
-                {/* Veg Special */}
-                <div className="bg-white rounded-xl border border-black shadow-[0_2px_8px_rgba(0,0,0,0.12)] p-4 md:p-6 flex flex-col items-center">
-                  <h3 className="text-lg md:text-xl font-bold text-green-600 mb-2 text-center">(Veg Special)</h3>
-                  <ul className="text-gray-800 text-sm md:text-base mb-4 text-left w-full max-w-sm space-y-2">
-                    {['Chapathis + Puri', 'Rice', 'Methi Singdana', 'Daal Tadka', 'Salaad/Papad/Pickle', 'Desert/Sweets'].map((item, idx) => (
-                      <li key={idx} className="flex items-center gap-2">
-                        <img src={getMenuItemImage(item)} alt="" className="w-6 h-6 md:w-7 md:h-7 rounded object-cover border border-gray-200" />
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <div className="w-full max-w-xs mt-auto">
-                    <div className="text-xs md:text-sm text-left border-t border-gray-200 pt-2">
-                      <div><span className="font-semibold">Rate = 85/-</span> for Tiffin Delivery Order</div>
-                      <div><span className="font-semibold">Rate = 95/-</span> for Take-away</div>
-                    </div>
-                  </div>
-                </div>
-                {/* Chicken Meal */}
-                <div className="bg-white rounded-xl border border-black shadow-[0_2px_8px_rgba(0,0,0,0.12)] p-4 md:p-6 flex flex-col items-center">
-                  <h3 className="text-lg md:text-xl font-bold text-red-600 mb-2 text-center">(Chicken Meal)</h3>
-                  <ul className="text-gray-800 text-sm md:text-base mb-4 text-left w-full max-w-sm space-y-2">
-                    {['Chapathis', 'Rice', 'Chicken Masala', 'Salaad/Papad/Pickle'].map((item, idx) => (
-                      <li key={idx} className="flex items-center gap-2">
-                        <img src={getMenuItemImage(item)} alt="" className="w-6 h-6 md:w-7 md:h-7 rounded object-cover border border-gray-200" />
-                        <span className={item === 'Chicken Masala' ? 'text-red-600 font-bold' : ''}>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <div className="w-full max-w-xs mt-auto">
-                    <div className="text-xs md:text-sm text-left border-t border-gray-200 pt-2">
-                      <div><span className="font-semibold">Rate = 110/-</span> for Tiffin Delivery Order</div>
-                      <div><span className="font-semibold">Rate = 120/-</span> for Take Away</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <div className="text-center font-semibold text-lg text-red-700 my-6">
-          1 Time Refundable Security Deposit 299/- to be paid towards Tiffin Box
-        </div>
-
         <section className="py-8 md:py-16">
           <div className="container mx-auto px-4">
             <h2 className="text-2xl md:text-3xl font-bold text-brand-brown mb-6 text-center">Our Plans</h2>
@@ -308,6 +181,12 @@ const MenuPage = () => {
             </div>
           </div>
         </section>
+
+        <div className="max-w-3xl mx-auto my-8 p-4 bg-yellow-50 border-l-4 border-yellow-400 rounded text-yellow-900 text-base md:text-lg">
+          <strong>Note:</strong><br />
+          1. Bhaji may change daily or remain the same for a few days — enjoy a mix of homely seasonal curries throughout the month!<br />
+          2. One Time Refundable Security Deposit 299/- to be paid towards Tiffin Box
+        </div>
 
         <section className="py-8 md:py-16">
           <div className="container mx-auto px-4 text-center">
