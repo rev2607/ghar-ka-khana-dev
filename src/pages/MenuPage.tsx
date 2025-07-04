@@ -184,7 +184,7 @@ const MenuPage = () => {
 
         <div className="max-w-3xl mx-auto my-8 p-4 bg-yellow-50 border-l-4 border-yellow-400 rounded text-yellow-900 text-base md:text-lg">
           <strong>Note:</strong><br />
-          1. Bhaji may change daily or remain the same for a few days — enjoy a mix of homely seasonal curries throughout the month!<br />
+          1. Bhaji will change daily — enjoy a mix of homely seasonal curries throughout the month!<br />
           2. One Time Refundable Security Deposit 299/- to be paid towards Tiffin Box
         </div>
 
