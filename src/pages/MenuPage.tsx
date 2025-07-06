@@ -80,16 +80,16 @@ const MenuPage = () => {
             <div className="max-w-6xl mx-auto">
               {/* Menu Plans Grid */}
               <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-8 lg:gap-10 my-6 md:my-8">
-                {/* Veg Normal Plan */}
+                {/* Veg Promo Plan */}
                 <div className="bg-white rounded-xl border border-black shadow-[0_2px_8px_rgba(0,0,0,0.12)] p-4 md:p-6 flex flex-col items-center">
-                  <h3 className="text-lg md:text-xl font-bold text-green-600 mb-2 text-center">(Veg Normal) <span className="font-normal">Rate 75/-</span></h3>
+                  <h3 className="text-lg md:text-xl font-bold text-green-700 mb-2 text-center">(Veg Promo)</h3>
                   <ul className="text-gray-800 text-sm md:text-base mb-4 text-left w-full max-w-sm space-y-2">
                     {[
-                      'Chapathis',
+                      '3 Chapathi',
                       'Rice',
-                      'Bhaji',
-                      'Dal/Dahi Kadi',
-                      'Salad / Pickle / Papad',
+                      '1 Bhaji',
+                      '1 Dal/Kadi',
+                      'Salad/Papad/Pickle',
                     ].map((item, idx) => (
                       <li key={idx} className="flex items-center gap-2">
                         <img src={getMenuItemImage(item)} alt="" className="w-6 h-6 md:w-7 md:h-7 rounded object-cover border border-gray-200" />
@@ -97,8 +97,9 @@ const MenuPage = () => {
                       </li>
                     ))}
                   </ul>
-                  <div className="w-full max-w-xs mt-auto">
-                    <table className="w-full text-xs md:text-sm text-left border-t border-gray-200 no-spacing-table">
+                  <div className="w-full max-w-xs mb-2 text-xs md:text-sm text-left text-yellow-900 bg-yellow-50 border-l-4 border-yellow-400 rounded px-2 py-1">1 Week, only 1 Time offer</div>
+                  <div className="w-full max-w-xs mb-2 bg-yellow-50 border-l-4 border-yellow-400 rounded px-2 py-1 text-yellow-900">
+                    <table className="w-full text-xs md:text-sm text-left no-spacing-table">
                       <tbody>
                         <tr className="align-top p-0">
                           <td className="font-semibold p-0 align-top">Weekly</td>
@@ -112,17 +113,16 @@ const MenuPage = () => {
                     </table>
                   </div>
                 </div>
-                {/* Veg Special Plan */}
+                {/* Veg Normal Plan */}
                 <div className="bg-white rounded-xl border border-black shadow-[0_2px_8px_rgba(0,0,0,0.12)] p-4 md:p-6 flex flex-col items-center">
-                  <h3 className="text-lg md:text-xl font-bold text-green-600 mb-2 text-center">(Veg Special) <span className="font-normal">Rate 85/-</span></h3>
+                  <h3 className="text-lg md:text-xl font-bold text-green-600 mb-2 text-center">(Veg Normal)</h3>
                   <ul className="text-gray-800 text-sm md:text-base mb-4 text-left w-full max-w-sm space-y-2">
                     {[
-                      'Chapathis + Special FlatBread',
+                      'Chapathis',
                       'Rice',
                       'Bhaji',
-                      'Dal/Dahi Kadi',
-                      'Salad / Pickle / Papad',
-                      'Complimentary',
+                      'Dal/Kadi',
+                      'Salad/Papad/Pickle',
                     ].map((item, idx) => (
                       <li key={idx} className="flex items-center gap-2">
                         <img src={getMenuItemImage(item)} alt="" className="w-6 h-6 md:w-7 md:h-7 rounded object-cover border border-gray-200" />
@@ -130,8 +130,45 @@ const MenuPage = () => {
                       </li>
                     ))}
                   </ul>
-                  <div className="w-full max-w-xs mt-auto">
-                    <table className="w-full text-xs md:text-sm text-left border-t border-gray-200 no-spacing-table">
+                  <div className="w-full max-w-xs mt-auto bg-yellow-50 border-l-4 border-yellow-400 rounded px-2 py-1 text-yellow-900">
+                    <table className="w-full text-xs md:text-sm text-left no-spacing-table">
+                      <tbody>
+                        <tr className="align-top p-0">
+                          <td className="font-semibold p-0 align-top">Weekly</td>
+                          <td className="p-0 align-top">450/-</td>
+                        </tr>
+                        <tr className="align-top p-0">
+                          <td className="font-semibold p-0 align-top">Monthly</td>
+                          <td className="p-0 align-top">1950/-</td>
+                        </tr>
+                        <tr className="align-top p-0">
+                          <td className="font-semibold p-0 align-top">Take Away</td>
+                          <td className="p-0 align-top">75/-</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                {/* Veg Special Plan */}
+                <div className="bg-white rounded-xl border border-black shadow-[0_2px_8px_rgba(0,0,0,0.12)] p-4 md:p-6 flex flex-col items-center">
+                  <h3 className="text-lg md:text-xl font-bold text-green-600 mb-2 text-center">(Veg Special)</h3>
+                  <ul className="text-gray-800 text-sm md:text-base mb-4 text-left w-full max-w-sm space-y-2">
+                    {[
+                      'Chapathis (May be combined)',
+                      'Rice',
+                      'Bhaji',
+                      'Dal/Kadi',
+                      'Salad/Papad/Pickle',
+                      'Compliment',
+                    ].map((item, idx) => (
+                      <li key={idx} className="flex items-center gap-2">
+                        <img src={getMenuItemImage(item)} alt="" className="w-6 h-6 md:w-7 md:h-7 rounded object-cover border border-gray-200" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="w-full max-w-xs mt-auto bg-yellow-50 border-l-4 border-yellow-400 rounded px-2 py-1 text-yellow-900">
+                    <table className="w-full text-xs md:text-sm text-left no-spacing-table">
                       <tbody>
                         <tr className="align-top p-0">
                           <td className="font-semibold p-0 align-top">Weekly</td>
@@ -141,29 +178,32 @@ const MenuPage = () => {
                           <td className="font-semibold p-0 align-top">Monthly</td>
                           <td className="p-0 align-top">2210/-</td>
                         </tr>
+                        <tr className="align-top p-0">
+                          <td className="font-semibold p-0 align-top">Take Away</td>
+                          <td className="p-0 align-top">85/-</td>
+                        </tr>
                       </tbody>
                     </table>
                   </div>
                 </div>
                 {/* Chicken Meal Plan */}
                 <div className="bg-white rounded-xl border border-black shadow-[0_2px_8px_rgba(0,0,0,0.12)] p-4 md:p-6 flex flex-col items-center">
-                  <h3 className="text-lg md:text-xl font-bold text-red-600 mb-2 text-center">(Chicken Meal) <span className="font-normal">Rate 110/-</span></h3>
+                  <h3 className="text-lg md:text-xl font-bold text-red-600 mb-2 text-center">(Chicken Meal)</h3>
                   <ul className="text-gray-800 text-sm md:text-base mb-4 text-left w-full max-w-sm space-y-2">
                     {[
-                      'Chapathis',
+                      'Chapathi',
                       'Rice',
-                      'Chicken Curry',
-                      'Salad',
-                      'Complimentary',
+                      'Special Chicken Curry',
+                      'Salad/Papad/Pickle',
                     ].map((item, idx) => (
                       <li key={idx} className="flex items-center gap-2">
                         <img src={getMenuItemImage(item)} alt="" className="w-6 h-6 md:w-7 md:h-7 rounded object-cover border border-gray-200" />
-                        <span className={item === 'Chicken Curry' ? 'text-red-600 font-bold' : ''}>{item}</span>
+                        <span className={item.includes('Chicken') ? 'text-red-600 font-bold' : ''}>{item}</span>
                       </li>
                     ))}
                   </ul>
-                  <div className="w-full max-w-xs mt-auto">
-                    <table className="w-full text-xs md:text-sm text-left border-t border-gray-200 no-spacing-table">
+                  <div className="w-full max-w-xs mt-auto bg-yellow-50 border-l-4 border-yellow-400 rounded px-2 py-1 text-yellow-900">
+                    <table className="w-full text-xs md:text-sm text-left no-spacing-table">
                       <tbody>
                         <tr className="align-top p-0">
                           <td className="font-semibold p-0 align-top">Weekly</td>
@@ -171,11 +211,35 @@ const MenuPage = () => {
                         </tr>
                         <tr className="align-top p-0">
                           <td className="font-semibold p-0 align-top">Monthly</td>
-                          <td className="p-0 align-top">2860/-</td>
+                          <td className="p-0 align-top">2675/- 1st month, then 2860/-</td>
+                        </tr>
+                        <tr className="align-top p-0">
+                          <td className="font-semibold p-0 align-top">Take Away</td>
+                          <td className="p-0 align-top">107/-</td>
                         </tr>
                       </tbody>
                     </table>
                   </div>
+                </div>
+                {/* Non-Veg Chicken Special Meal Plan */}
+                <div className="bg-white rounded-xl border border-black shadow-[0_2px_8px_rgba(0,0,0,0.12)] p-4 md:p-6 flex flex-col items-center">
+                  <h3 className="text-lg md:text-xl font-bold text-red-700 mb-2 text-center">(Chicken Special Meal)</h3>
+                  <ul className="text-gray-800 text-sm md:text-base mb-4 text-left w-full max-w-sm space-y-2">
+                    {[
+                      'Chapathi (May be combined)',
+                      'Rice',
+                      'Special Chicken Curry',
+                      'Salad/Papad/Pickle',
+                      'Compliment',
+                    ].map((item, idx) => (
+                      <li key={idx} className="flex items-center gap-2">
+                        <img src={getMenuItemImage(item)} alt="" className="w-6 h-6 md:w-7 md:h-7 rounded object-cover border border-gray-200" />
+                        <span className={item.includes('Chicken') ? 'text-red-700 font-bold' : ''}>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="w-full max-w-xs mb-2 text-xs md:text-sm text-left text-yellow-900 bg-yellow-50 border-l-4 border-yellow-400 rounded px-2 py-1">Only booked in advance</div>
+                  <div className="w-full max-w-xs mb-2 text-xs md:text-sm text-left bg-yellow-50 border-l-4 border-yellow-400 rounded px-2 py-1 text-yellow-900">Monthly only.</div>
                 </div>
               </div>
             </div>
