@@ -161,34 +161,9 @@ const MenuPage = () => {
                     </table>
                   </div>
                 </div>
-                {/* NonVeg Promo Plan */}
-                <div className="bg-white rounded-xl border border-black shadow-[0_2px_8px_rgba(0,0,0,0.12)] p-4 md:p-6 flex flex-col items-center">
-                  <h3 className="text-lg md:text-xl font-bold text-red-700 mb-2 text-center">(Non - Veg Promo) Price ₹89</h3>
-                  <ul className="text-gray-800 text-sm md:text-base mb-4 text-left w-full max-w-sm space-y-2">
-                    {[
-                      'Chapathi',
-                      'Rice',
-                      'Special Chicken Curry',
-                      'Salad/Papad/Pickle',
-                    ].map((item, idx) => (
-                      <li key={idx} className="flex items-center gap-2">
-                        <img src={getMenuItemImage(item)} alt="" className="w-6 h-6 md:w-7 md:h-7 rounded object-cover border border-gray-200" />
-                        <span className={item.includes('Chicken') ? 'text-red-700 font-bold' : ''}>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <div className="w-full max-w-xs mb-2 text-xs md:text-sm text-left text-yellow-900 bg-yellow-50 border-l-4 border-yellow-400 rounded px-2 py-1">1 Week, only 1 Time offer</div>
-                  <div className="w-full max-w-xs mb-2 bg-yellow-50 border-l-4 border-yellow-400 rounded px-2 py-1 text-yellow-900">
-                    <table className="w-full text-xs md:text-sm text-left no-spacing-table">
-                      <tbody>
-                        <tr className="align-top p-0"><td className="font-semibold p-0 align-top">Weekly <span className='font-normal'>(one-time offer)</span></td><td className="p-0 align-top">₹534</td></tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
                 {/* Non-Veg Normal Plan */}
                 <div className="bg-white rounded-xl border border-black shadow-[0_2px_8px_rgba(0,0,0,0.12)] p-4 md:p-6 flex flex-col items-center">
-                  <h3 className="text-lg md:text-xl font-bold text-red-600 mb-2 text-center">(Non - Veg Normal) Price ₹110</h3>
+                  <h3 className="text-lg md:text-xl font-bold text-red-600 mb-2 text-center">(Non - Veg Normal) Takeaway ₹120</h3>
                   <ul className="text-gray-800 text-sm md:text-base mb-4 text-left w-full max-w-sm space-y-2">
                     {[
                       'Chapathi',
@@ -206,15 +181,13 @@ const MenuPage = () => {
                     <table className="w-full text-xs md:text-sm text-left no-spacing-table">
                       <tbody>
                         <tr className="align-top p-0"><td className="font-semibold p-0 align-top">One-Day Takeaway</td><td className="p-0 align-top">₹120</td></tr>
-                        <tr className="align-top p-0"><td className="font-semibold p-0 align-top">Weekly</td><td className="p-0 align-top">₹660</td></tr>
-                        <tr className="align-top p-0"><td className="font-semibold p-0 align-top">Monthly</td><td className="p-0 align-top">₹2675</td></tr>
                       </tbody>
                     </table>
                   </div>
                 </div>
                 {/* Non-Veg Special Plan */}
                 <div className="bg-white rounded-xl border border-black shadow-[0_2px_8px_rgba(0,0,0,0.12)] p-4 md:p-6 flex flex-col items-center">
-                  <h3 className="text-lg md:text-xl font-bold text-red-700 mb-2 text-center">(Non - Veg Special) Price ₹120</h3>
+                  <h3 className="text-lg md:text-xl font-bold text-red-700 mb-2 text-center">(Non - Veg Special) Takeaway ₹130</h3>
                   <ul className="text-gray-800 text-sm md:text-base mb-4 text-left w-full max-w-sm space-y-2">
                     {[
                       'Chapathi',
@@ -233,10 +206,17 @@ const MenuPage = () => {
                     <table className="w-full text-xs md:text-sm text-left no-spacing-table">
                       <tbody>
                         <tr className="align-top p-0"><td className="font-semibold p-0 align-top">One-Day Takeaway</td><td className="p-0 align-top">₹130</td></tr>
-                        <tr className="align-top p-0"><td className="font-semibold p-0 align-top">Weekly</td><td className="p-0 align-top">₹720</td></tr>
-                        <tr className="align-top p-0"><td className="font-semibold p-0 align-top">Monthly</td><td className="p-0 align-top">₹2925</td></tr>
                       </tbody>
                     </table>
+                  </div>
+                </div>
+                {/* Coming Soon Card */}
+                <div className="bg-white rounded-xl border border-black shadow-[0_2px_8px_rgba(0,0,0,0.12)] p-4 md:p-6 flex flex-col items-center justify-center">
+                  <div className="text-center">
+                    <h3 className="text-lg md:text-xl font-bold text-gray-600 mb-2">More plans are coming soon</h3>
+                    <div className="text-gray-500 text-sm md:text-base">
+                      Stay tuned for exciting new meal options!
+                    </div>
                   </div>
                 </div>
               </div>
