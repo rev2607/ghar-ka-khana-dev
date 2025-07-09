@@ -38,7 +38,7 @@ const HeroSection = () => {
                 .why-choose-block { max-width: 520px; }
               }
             `}</style>
-            <h2 className="why-choose-block text-2xl md:text-3xl lg:text-4xl font-bold mb-2 md:mb-3 text-left text-[#723303]">Why Choose Neelam's Ghar-Ka-Khana?</h2>
+            <h2 className="why-choose-block text-2xl md:text-3xl lg:text-4xl font-bold mb-2 md:mb-3 text-left text-[#723303] md:whitespace-nowrap">Why Choose Neelam's Ghar-Ka-Khana?</h2>
             <div className="why-choose-block text-gray-700 max-w-4xl text-base md:text-lg text-left">
               <p>
                 We're more than just a food service — we deliver fresh,<br />
