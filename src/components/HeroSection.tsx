@@ -27,7 +27,7 @@ const HeroSection = () => {
             >
               <span className="text-orange-700 text-sm md:text-lg lg:text-xl font-semibold leading-tight">Introductory</span>
               <span className="text-orange-900 text-xs md:text-base lg:text-lg font-semibold leading-tight mt-1">Offer Price</span>
-              <span className="text-orange-600 text-2xl md:text-4xl lg:text-5xl font-bold leading-tight">59/-</span>
+              <span className="text-orange-600 text-2xl md:text-4xl lg:text-5xl font-bold leading-tight">69/-</span>
               <span className="text-orange-800 text-xs md:text-base lg:text-lg leading-tight">per meal*</span>
             </motion.div>
           </div>

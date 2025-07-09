@@ -10,7 +10,13 @@ const features = [
   },
   {
     title: "Quality You Can Trust",
-    description: "Every meal is prepared with handpicked ingredients and cooked in premium Saffola oil — never reused or low-grade — ensuring consistent taste, health, and quality.",
+    description: "Fresh ingredients, never reused. Consistent taste and health in every meal.",
+    details: [
+      "Basmathi Rice – We use only Basmathi rice in our meals.",
+      "Oil – We cook using big-brand, high-quality oil (e.g., Saffola).",
+      "Masala – No packaged masalas; we use freshly ground spices.",
+      "Chapathi Flour – We do not use packaged flour for our chapathis."
+    ],
     icon: (
       <img src="/oil.png" alt="Quality Oil" style={{ width: '2.2em', height: '2.2em', objectFit: 'contain', display: 'inline-block' }} />
     )
@@ -26,11 +32,11 @@ const FeaturesSection = () => {
   return (
     <section className="pt-0 pb-0 bg-transparent">
       <div className="container mx-auto px-4 md:px-0 mt-0 pt-0">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 my-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 my-8 items-start">
           {features.map((feature, idx) => (
             <motion.div
               key={idx}
-              className="relative bg-white rounded-xl shadow-lg p-6 pt-12 text-center border border-gray-200"
+              className={`relative bg-white rounded-xl shadow-lg p-6 pt-12 text-center border border-gray-200 h-auto ${idx === 0 || idx === 2 ? 'mt-10' : ''}`}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
@@ -47,6 +53,16 @@ const FeaturesSection = () => {
               </div>
               <h3 className="mt-4 text-lg font-bold text-[#7C2D12]">{feature.title}</h3>
               <p className="mt-2 text-gray-700 text-sm">{feature.description}</p>
+              {feature.details && (
+                <ul className="mt-3 text-gray-600 text-xs space-y-1">
+                  {feature.details.map((detail, index) => (
+                    <li key={index} className="flex items-start">
+                      <span className="text-orange-500 mr-2 mt-1">○</span>
+                      <span>{detail}</span>
+                    </li>
+                  ))}
+                </ul>
+              )}
             </motion.div>
           ))}
         </div>
