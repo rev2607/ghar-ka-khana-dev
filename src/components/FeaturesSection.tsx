@@ -12,10 +12,10 @@ const features = [
     title: "Quality You Can Trust",
     description: "Fresh ingredients, never reused. Consistent taste and health in every meal.",
     details: [
-      "Basmathi Rice – We use only Basmathi rice in our meals.",
-      "Oil – We cook using big-brand, high-quality oil (e.g., Saffola).",
-      "Masala – No packaged masalas; we use freshly ground spices.",
-      "Chapathi Flour – We do not use packaged flour for our chapathis."
+      "Basmathi Rice – We use only Basmathi rice in meals.",
+      "Oil – We cook using high-quality oil (e.g., Saffola).",
+      "Masala – No packaged masalas; we use fresh spices.",
+      "Chapathi Flour – We do not use packaged flour for chapathis."
     ],
     icon: (
       <img src="/oil.png" alt="Quality Oil" style={{ width: '2.2em', height: '2.2em', objectFit: 'contain', display: 'inline-block' }} />
