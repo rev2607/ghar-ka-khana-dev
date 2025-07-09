@@ -54,10 +54,10 @@ const FeaturesSection = () => {
               <h3 className="mt-4 text-lg font-bold text-[#7C2D12]">{feature.title}</h3>
               <p className="mt-2 text-gray-700 text-sm">{feature.description}</p>
               {feature.details && (
-                <ul className="mt-3 text-gray-600 text-xs space-y-1">
+                <ul className="mt-3 text-gray-700 text-sm space-y-1">
                   {feature.details.map((detail, index) => (
-                    <li key={index} className="flex items-start">
-                      <span className="text-orange-500 mr-2 mt-1">○</span>
+                    <li key={index} className="flex items-center leading-tight">
+                      <span className="text-green-600 mr-2">✓</span>
                       <span>{detail}</span>
                     </li>
                   ))}
