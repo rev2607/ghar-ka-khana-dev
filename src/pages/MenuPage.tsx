@@ -212,6 +212,55 @@ const MenuPage = () => {
                     </table>
                   </div>
                 </div>
+                {/* Normal Non-Veg Plan */}
+                <div className="bg-white rounded-xl border border-black shadow-[0_2px_8px_rgba(0,0,0,0.12)] p-4 md:p-6 flex flex-col items-center">
+                  <h3 className="text-lg md:text-xl font-bold text-red-600 mb-2 text-center">Normal Non-Veg</h3>
+                  <ul className="text-gray-800 text-sm md:text-base mb-4 text-left w-full max-w-sm space-y-2">
+                    {[
+                      'Chapathi',
+                      'Rice',
+                      'Special Chicken Curry',
+                      'Salad/Papad/Pickle',
+                    ].map((item, idx) => (
+                      <li key={idx} className="flex items-center gap-2">
+                        <img src={getMenuItemImage(item)} alt="" className="w-6 h-6 md:w-7 md:h-7 rounded object-cover border border-gray-200" />
+                        <span className={item.includes('Chicken') ? 'text-red-600 font-bold' : ''}>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="w-full max-w-xs mt-auto bg-yellow-50 border-l-4 border-yellow-400 rounded px-2 py-1 text-yellow-900">
+                    <table className="w-full text-xs md:text-sm text-left no-spacing-table">
+                      <tbody>
+                        <tr className="align-top p-0"><td className="font-semibold p-0 align-top">One-Day Takeaway</td><td className="p-0 align-top">₹120</td></tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                {/* Special Non-Veg Plan */}
+                <div className="bg-white rounded-xl border border-black shadow-[0_2px_8px_rgba(0,0,0,0.12)] p-4 md:p-6 flex flex-col items-center">
+                  <h3 className="text-lg md:text-xl font-bold text-red-700 mb-2 text-center">Special Non-Veg</h3>
+                  <ul className="text-gray-800 text-sm md:text-base mb-4 text-left w-full max-w-sm space-y-2">
+                    {[
+                      'Chapathi',
+                      'Rice',
+                      'Special Chicken Curry',
+                      'Salad/Papad/Pickle',
+                      'Compliment',
+                    ].map((item, idx) => (
+                      <li key={idx} className="flex items-center gap-2">
+                        <img src={getMenuItemImage(item)} alt="" className="w-6 h-6 md:w-7 md:h-7 rounded object-cover border border-gray-200" />
+                        <span className={item.includes('Chicken') ? 'text-red-700 font-bold' : ''}>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="w-full max-w-xs mt-auto bg-yellow-50 border-l-4 border-yellow-400 rounded px-2 py-1 text-yellow-900">
+                    <table className="w-full text-xs md:text-sm text-left no-spacing-table">
+                      <tbody>
+                        <tr className="align-top p-0"><td className="font-semibold p-0 align-top">One-Day Takeaway</td><td className="p-0 align-top">₹130</td></tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
                 {/* Coming Soon Card */}
                 <div className="bg-white rounded-xl border border-black shadow-[0_2px_8px_rgba(0,0,0,0.12)] p-4 md:p-6 flex flex-col items-center justify-center">
                   <div className="text-center">
