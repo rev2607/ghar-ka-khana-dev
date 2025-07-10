@@ -163,7 +163,7 @@ const MenuPage = () => {
                 </div>
                 {/* Non-Veg Normal Plan */}
                 <div className="bg-white rounded-xl border border-black shadow-[0_2px_8px_rgba(0,0,0,0.12)] p-4 md:p-6 flex flex-col items-center">
-                  <h3 className="text-lg md:text-xl font-bold text-red-600 mb-2 text-center">(Combo Normal NV + Veg) Price 110</h3>
+                  <h3 className="text-lg md:text-xl font-bold text-red-600 mb-2 text-center">(Combo Normal NV + Veg) Price ₹110</h3>
                   <ul className="text-gray-800 text-sm md:text-base mb-4 text-left w-full max-w-sm space-y-2">
                     {[
                       'Chapathi',
@@ -188,7 +188,7 @@ const MenuPage = () => {
                 </div>
                 {/* Non-Veg Special Plan */}
                 <div className="bg-white rounded-xl border border-black shadow-[0_2px_8px_rgba(0,0,0,0.12)] p-4 md:p-6 flex flex-col items-center">
-                  <h3 className="text-lg md:text-xl font-bold text-red-700 mb-2 text-center">(Combo Special NV + Veg) Price 120</h3>
+                  <h3 className="text-lg md:text-xl font-bold text-red-700 mb-2 text-center">(Combo Special NV + Veg) Price ₹120</h3>
                   <ul className="text-gray-800 text-sm md:text-base mb-4 text-left w-full max-w-sm space-y-2">
                     {[
                       'Chapathi',
