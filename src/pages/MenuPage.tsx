@@ -280,7 +280,7 @@ const MenuPage = () => {
           1. Bhaji will change daily — enjoy a mix of homely seasonal curries throughout the month!<br />
           2. One Time Refundable Security Deposit 299/- to be paid towards Tiffin Box<br />
           3. Promo plans are one-time offers only.<br />
-          4. No service on Sundays or public holidays.<br />
+          4. No service on Sundays and public holidays.<br />
           5. Weekly = 6 days, Monthly = 25 days.<br />
           6. Combo pack have 1 day (Wednesday) Chicken and remaining 5 days Veg
         </div>
