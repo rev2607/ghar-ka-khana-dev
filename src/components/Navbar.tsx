@@ -33,22 +33,23 @@ const Navbar = () => {
             {/* Mobile-only tagline */}
             <span className="text-sm font-semibold text-black md:hidden mt-3 self-start">
               Cloud Kitchen<br />
-              Homely food delivered at your Home & Office
+              Free Homely Food Delivery at your Home & Office
             </span>
           </div>
           <span className="text-base font-semibold text-black hidden sm:block self-start mt-2">
             Cloud Kitchen<br />
-            Homely food delivered at your Home & Office
+            Free Homely Food Delivery at your Home & Office
           </span>
         </div>
         
         {/* Right: Nav links - desktop */}
         <nav className="hidden md:flex items-center space-x-4 min-w-[420px] justify-end">
           <Link to="/" className={`text-[#222] text-lg font-medium hover:font-bold hover:text-[#F47A1F] transition-colors pb-1 ${isActive('/') ? 'border-b-2 border-orange-500' : ''}`}>Home</Link>
-          <Link to="/about" className={`text-[#222] text-lg font-medium hover:font-bold hover:text-[#F47A1F] transition-colors pb-1 ${isActive('/about') ? 'border-b-2 border-orange-500' : ''}`}>About</Link>
           <Link to="/menu" className={`text-[#222] text-lg font-medium hover:font-bold hover:text-[#F47A1F] transition-colors pb-1 ${isActive('/menu') ? 'border-b-2 border-orange-500' : ''}`}>Menu</Link>
           <Link to="/terms" className={`text-[#222] text-lg font-medium hover:font-bold hover:text-[#F47A1F] transition-colors pb-1 ${isActive('/terms') ? 'border-b-2 border-orange-500' : ''}`}>Before Ordering</Link>
-          <Link to="/contact" className={`text-[#222] text-lg font-medium hover:font-bold hover:text-[#F47A1F] transition-colors pb-1 ${isActive('/contact') ? 'border-b-2 border-orange-500' : ''}`}>Contact</Link>
+          <Link to="/about" className={`text-[#222] text-lg font-medium hover:font-bold hover:text-[#F47A1F] transition-colors pb-1 ${isActive('/about') ? 'border-b-2 border-orange-500' : ''}`}>About</Link>
+          <Link to="/contact" className={`text-[#222] text-lg font-medium hover:font-bold hover:text-[#F47A1F] transition-colors pb-1 ${isActive('/contact') ? 'border-b-2 border-orange-500' : ''}`}>Contact Us</Link>
+          <Link to="/login" className={`text-[#222] text-lg font-medium hover:font-bold hover:text-[#F47A1F] transition-colors pb-1 ${isActive('/login') ? 'border-b-2 border-orange-500' : ''}`}>Login</Link>
         </nav>
 
         {/* Mobile menu button */}

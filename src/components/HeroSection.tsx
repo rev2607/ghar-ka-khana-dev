@@ -14,116 +14,25 @@ const HeroSection = () => {
             <img
               src="/food.png"
               alt="Food Tray"
-              className="w-full max-w-[1600px] h-auto object-contain -rotate-0 md:-rotate-6"
+              className="w-full max-w-[4000px] h-auto object-contain scale-150 -rotate-0 md:-rotate-6 mt-8 md:mt-12"
             />
             {/* Offer Price Glassmorphism Card */}
             <motion.div
-              className="absolute top-0 right-8 md:right-16 flex flex-col items-center justify-center text-center z-10 px-8 py-6 rounded-2xl border border-orange-300 shadow-xl backdrop-blur-md bg-white/60"
+              className="absolute top-0 right-8 md:right-16 flex flex-col items-center justify-center text-center z-10 px-8 py-6 rounded-2xl border border-orange-300 shadow-xl backdrop-blur-md bg-white/60 ml-72 md:ml-[32rem] mt-[-2rem] md:mt-[-3rem]"
               initial={{ scale: 0.95, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.6, type: 'spring' }}
               whileHover={{ scale: 1.05 }}
               style={{ minWidth: '8rem', minHeight: '8rem' }}
             >
-              <div className="glass-offer-card">
-                <div className="glass-offer-badge">Introductory Offer</div>
-                <div className="glass-offer-content">
-                  <span className="glass-offer-price-label">Price =</span>
-                  <span className="glass-offer-price" style={{ color: '#e11d48', background: 'none', WebkitBackgroundClip: 'initial', WebkitTextFillColor: 'initial' }}>69/-</span>
-                </div>
-                <span className="glass-offer-per-meal">(Per Meal)</span>
-              </div>
-              <style>{`
-                .glass-offer-card {
-                  position: relative;
-                  background: rgba(255, 255, 255, 0.25);
-                  border-radius: 1rem;
-                  box-shadow: 0 4px 16px 0 rgba(31, 38, 135, 0.18), 0 1px 4px 0 rgba(0,0,0,0.10);
-                  border: 1px solid rgba(244, 122, 31, 0.25);
-                  backdrop-filter: blur(8px);
-                  -webkit-backdrop-filter: blur(8px);
-                  padding: 1.25rem 0.75rem 1.1rem 0.75rem;
-                  min-width: 6rem;
-                  min-height: 6rem;
-                  max-width: 175px;
-                  margin: 0 auto;
-                  display: flex;
-                  flex-direction: column;
-                  align-items: center;
-                  justify-content: flex-start;
-                }
-                .glass-offer-badge {
-                  position: absolute;
-                  top: -0.6rem;
-                  left: 50%;
-                  transform: translateX(-50%);
-                  background: linear-gradient(90deg, #fbbf24 0%, #f47a1f 100%);
-                  color: #fff;
-                  font-weight: 700;
-                  font-size: 0.5rem;
-                  border-radius: 999px;
-                  padding: 0.2em 0.7em;
-                  box-shadow: 0 1px 4px 0 rgba(244, 122, 31, 0.10);
-                  letter-spacing: 0.04em;
-                  z-index: 2;
-                  white-space: nowrap;
-                }
-                .glass-offer-content {
-                  display: flex;
-                  flex-direction: column;
-                  align-items: center;
-                  margin-top: 0.9rem;
-                  width: 100%;
-                }
-                .glass-offer-price-label {
-                  color: #723303;
-                  font-size: 0.75rem;
-                  font-weight: 700;
-                  margin-bottom: 0.1em;
-                  text-align: center;
-                }
-                .glass-offer-price {
-                  font-size: 1.6rem;
-                  font-weight: 900;
-                  background: linear-gradient(90deg, #f43f5e 0%, #fbbf24 100%);
-                  -webkit-background-clip: text;
-                  -webkit-text-fill-color: transparent;
-                  background-clip: text;
-                  text-fill-color: transparent;
-                  margin-bottom: 0.1em;
-                  letter-spacing: 0.02em;
-                }
-                .glass-offer-per-meal {
-                  background: rgba(244, 122, 31, 0.12);
-                  color: #723303;
-                  font-size: 0.55rem;
-                  font-weight: 500;
-                  border-radius: 999px;
-                  padding: 0.15em 0.6em;
-                  margin-top: 0.8em;
-                  box-shadow: 0 0.5px 2px 0 rgba(244, 122, 31, 0.08);
-                }
-                @media (min-width: 768px) {
-                  .glass-offer-card { padding: 1.5rem 1rem 1.25rem 1rem; max-width: 210px; }
-                  .glass-offer-badge { font-size: 0.55rem; top: -0.75rem; }
-                  .glass-offer-content { margin-top: 1.1rem; }
-                  .glass-offer-price-label { font-size: 1rem; }
-                  .glass-offer-price { font-size: 2.25rem; }
-                  .glass-offer-per-meal { font-size: 0.6rem; }
-                }
-                @media (min-width: 1024px) {
-                  .glass-offer-card { padding: 1.75rem 1.25rem 1.5rem 1.25rem; max-width: 250px; }
-                  .glass-offer-badge { font-size: 0.6rem; top: -1rem; }
-                  .glass-offer-content { margin-top: 1.4rem; }
-                  .glass-offer-price-label { font-size: 1.2rem; }
-                  .glass-offer-price { font-size: 3rem; }
-                  .glass-offer-per-meal { font-size: 0.65rem; }
-                }
-              `}</style>
+              <div className="font-bold text-[#fff] bg-gradient-to-r from-yellow-400 to-orange-500 px-4 py-1 rounded-full mb-2 whitespace-nowrap">Introductory Offer</div>
+              <div className="text-[#723303] text-lg md:text-xl font-bold mb-1">Price =</div>
+              <div className="text-[#e11d48] text-3xl md:text-5xl font-extrabold mb-1">69/-</div>
+              <div className="text-[#723303] text-base md:text-lg font-medium bg-orange-100 rounded-full px-3 py-1 mt-1">(Per Meal)</div>
             </motion.div>
           </div>
           {/* Desktop: Why Choose block in original place */}
-          <div className="w-full mt-6 md:mt-10 mb-2 md:mb-4 mx-auto hidden md:block">
+          <div className="w-full mt-24 md:mt-32 mb-2 md:mb-4 mx-auto hidden md:block">
             <style>{`
               @media (min-width: 1024px) {
                 .why-choose-block { max-width: 520px; }
