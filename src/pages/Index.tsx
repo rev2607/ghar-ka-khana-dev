@@ -18,33 +18,6 @@ const Index = () => {
           <FeaturesSection />
         </div>
         
-        {/* Call to Action Section */}
-        <section className="py-8 md:py-16" style={{ background: 'linear-gradient(to bottom, white 0%, #FFEFD6 30%, #FFEFD6 70%, white 100%)' }}>
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-brand-brown mb-4 md:mb-6">
-              Ready to Experience Authentic Home-Style Cooking?
-            </h2>
-            <p className="text-base md:text-lg text-gray-700 mb-6 md:mb-8 max-w-2xl mx-auto">
-              Join thousands of satisfied customers who trust us for their daily meals. 
-              Fresh ingredients, traditional recipes, and love in every bite.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
-              <Link 
-                to="/menu" 
-                className="bg-brand-orange text-white px-6 md:px-8 py-3 rounded-lg hover:bg-brand-brown transition-colors font-semibold"
-              >
-                View Our Menu
-              </Link>
-              <Link 
-                to="/contact" 
-                className="border-2 border-brand-orange text-brand-orange px-6 md:px-8 py-3 rounded-lg hover:bg-brand-orange hover:text-white transition-colors font-semibold"
-              >
-                Contact Us
-              </Link>
-            </div>
-          </div>
-        </section>
-
         {/* Disclaimer Section */}
         <section className="bg-brand-brown py-3 md:py-4">
           <div className="container mx-auto px-4 text-center">

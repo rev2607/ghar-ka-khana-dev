@@ -22,76 +22,17 @@ const TermsPage = () => {
               <div className="bg-white rounded-xl border border-gray-200 shadow-sm p-6 md:p-8">
                 
                 <div className="space-y-6">
-                  <div>
-                    <h2 className="text-xl md:text-2xl font-bold text-brand-brown mb-3">1. Advance Order Requirement</h2>
-                    <p className="text-gray-700 text-sm md:text-base leading-relaxed">
-                      All orders must be placed at least 24 hours in advance to ensure timely preparation and delivery.
-                    </p>
-                  </div>
-
-                  <div>
-                    <h2 className="text-xl md:text-2xl font-bold text-brand-brown mb-3">2. Available Plans & Pickup Option</h2>
-                    <p className="text-gray-700 text-sm md:text-base leading-relaxed mb-3">
-                      Tiffin packages are available on a Weekly or Monthly subscription basis.
-                    </p>
-                    <p className="text-gray-700 text-sm md:text-base leading-relaxed mb-3">
-                      Takeaway — Customers may collect their tiffin directly from our Cloud Kitchen location.
-                    </p>
-                    <p className="text-gray-700 text-sm md:text-base leading-relaxed">
-                      <strong>Note:</strong> Daily individual orders will soon be available via online platforms like Zomato and Swiggy.
-                    </p>
-                  </div>
-
-                  <div>
-                    <h2 className="text-xl md:text-2xl font-bold text-brand-brown mb-3">3. Payment Policy</h2>
-                    <p className="text-gray-700 text-sm md:text-base leading-relaxed">
-                      Full payment must be made 100% in advance at the time of booking.
-                    </p>
-                  </div>
-
-                  <div>
-                    <h2 className="text-xl md:text-2xl font-bold text-brand-brown mb-3">4. Tiffin Box Exchange Policy</h2>
-                    <p className="text-gray-700 text-sm md:text-base leading-relaxed">
-                      Customers are required to return the previous day's empty tiffin box at the time of receiving the new one. This helps maintain hygiene and operational efficiency.
-                    </p>
-                  </div>
-
-                  <div>
-                    <h2 className="text-xl md:text-2xl font-bold text-brand-brown mb-3">5. Delivery Timings</h2>
-                    <div className="space-y-2">
-                      <p className="text-gray-700 text-sm md:text-base leading-relaxed">
-                        <strong>Lunch:</strong> 11:00 AM – 1:30 PM
-                      </p>
-                      <p className="text-gray-700 text-sm md:text-base leading-relaxed">
-                        <strong>Dinner:</strong> 7:00 PM – 9:30 PM
-                      </p>
-                    </div>
-                  </div>
-
-                  <div>
-                    <h2 className="text-xl md:text-2xl font-bold text-brand-brown mb-3">6. Service Days in Monthly Plan</h2>
-                    <p className="text-gray-700 text-sm md:text-base leading-relaxed mb-3">
-                      A monthly plan includes 25 service days, excluding Sundays and Public Holidays.
-                    </p>
-                    <p className="text-gray-700 text-sm md:text-base leading-relaxed">
-                      Refer to the Holidays section on our website for the full list of non-service days.
-                    </p>
-                  </div>
-
-                  <div>
-                    <h2 className="text-xl md:text-2xl font-bold text-brand-brown mb-3">7. Company-Initiated Cancellations</h2>
-                    <p className="text-gray-700 text-sm md:text-base leading-relaxed">
-                      In case the company is unable to deliver on a scheduled day, we will compensate by extending the service period accordingly.
-                    </p>
-                  </div>
-
-                  <div>
-                    <h2 className="text-xl md:text-2xl font-bold text-brand-brown mb-3">8. Delivery Access</h2>
-                    <p className="text-gray-700 text-sm md:text-base leading-relaxed">
-                      Tiffin delivery will be provided only up to the 1st floor of any building. Customers on higher floors are requested to coordinate accordingly.
-                    </p>
-                  </div>
-
+                  <ul className="text-left text-gray-800 text-sm md:text-base leading-relaxed space-y-3 pl-2">
+                    <li>* <b>All orders must be placed at least 24 hours in advance</b> to ensure timely preparation and delivery.</li>
+                    <li>* Full payment must be made 100% in advance at the time of booking.</li>
+                    <li>* Tiffin delivery will be provided <b>only up to the 1st floor</b> of any building. Customers on higher floors are requested to coordinate accordingly.</li>
+                    <li>* Customers are required to return the previous day's <b>empty tiffin</b> box at the time of receiving the new one.</li>
+                    <li>* <b>Service Days:</b> 25 Days is for a Month Package & 6 Days for a Week Package; This excludes Sundays and Public Holidays.</li>
+                    <li>* Refer to the <b>Holidays list</b> in "About" section on our website for the full list of non-service days.</li>
+                    <li>* <b>Delivery Timings:</b> Lunch: 11:00 AM – 1:30 PM & Dinner: 7:00 PM – 9:30 PM</li>
+                    <li>* In case <b>if company is unable to deliver</b> on a scheduled day, the same will be intimated in advance & will compensate the meal by extending the service period accordingly.</li>
+                    <li>* Tiffin packages are available on a <b>Weekly, Monthly Subscription & Walk-In Take-Away</b> (From Cloud Kitchen Location) basis.</li>
+                  </ul>
                   <div className="border-t pt-6">
                     <p className="text-gray-600 text-sm text-center">
                       <strong>Last Updated:</strong> {new Date().toLocaleDateString()}

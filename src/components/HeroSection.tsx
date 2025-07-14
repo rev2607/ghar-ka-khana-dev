@@ -25,10 +25,101 @@ const HeroSection = () => {
               whileHover={{ scale: 1.05 }}
               style={{ minWidth: '8rem', minHeight: '8rem' }}
             >
-              <span className="text-orange-700 text-sm md:text-lg lg:text-xl font-semibold leading-tight">Introductory</span>
-              <span className="text-orange-900 text-xs md:text-base lg:text-lg font-semibold leading-tight mt-1">Offer Price</span>
-              <span className="text-orange-600 text-2xl md:text-4xl lg:text-5xl font-bold leading-tight">69/-</span>
-              <span className="text-orange-800 text-xs md:text-base lg:text-lg leading-tight">per meal*</span>
+              <div className="glass-offer-card">
+                <div className="glass-offer-badge">Introductory Offer</div>
+                <div className="glass-offer-content">
+                  <span className="glass-offer-price-label">Price =</span>
+                  <span className="glass-offer-price" style={{ color: '#e11d48', background: 'none', WebkitBackgroundClip: 'initial', WebkitTextFillColor: 'initial' }}>69/-</span>
+                </div>
+                <span className="glass-offer-per-meal">(Per Meal)</span>
+              </div>
+              <style>{`
+                .glass-offer-card {
+                  position: relative;
+                  background: rgba(255, 255, 255, 0.25);
+                  border-radius: 1rem;
+                  box-shadow: 0 4px 16px 0 rgba(31, 38, 135, 0.18), 0 1px 4px 0 rgba(0,0,0,0.10);
+                  border: 1px solid rgba(244, 122, 31, 0.25);
+                  backdrop-filter: blur(8px);
+                  -webkit-backdrop-filter: blur(8px);
+                  padding: 1.25rem 0.75rem 1.1rem 0.75rem;
+                  min-width: 6rem;
+                  min-height: 6rem;
+                  max-width: 175px;
+                  margin: 0 auto;
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                  justify-content: flex-start;
+                }
+                .glass-offer-badge {
+                  position: absolute;
+                  top: -0.6rem;
+                  left: 50%;
+                  transform: translateX(-50%);
+                  background: linear-gradient(90deg, #fbbf24 0%, #f47a1f 100%);
+                  color: #fff;
+                  font-weight: 700;
+                  font-size: 0.5rem;
+                  border-radius: 999px;
+                  padding: 0.2em 0.7em;
+                  box-shadow: 0 1px 4px 0 rgba(244, 122, 31, 0.10);
+                  letter-spacing: 0.04em;
+                  z-index: 2;
+                  white-space: nowrap;
+                }
+                .glass-offer-content {
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                  margin-top: 0.9rem;
+                  width: 100%;
+                }
+                .glass-offer-price-label {
+                  color: #723303;
+                  font-size: 0.75rem;
+                  font-weight: 700;
+                  margin-bottom: 0.1em;
+                  text-align: center;
+                }
+                .glass-offer-price {
+                  font-size: 1.6rem;
+                  font-weight: 900;
+                  background: linear-gradient(90deg, #f43f5e 0%, #fbbf24 100%);
+                  -webkit-background-clip: text;
+                  -webkit-text-fill-color: transparent;
+                  background-clip: text;
+                  text-fill-color: transparent;
+                  margin-bottom: 0.1em;
+                  letter-spacing: 0.02em;
+                }
+                .glass-offer-per-meal {
+                  background: rgba(244, 122, 31, 0.12);
+                  color: #723303;
+                  font-size: 0.55rem;
+                  font-weight: 500;
+                  border-radius: 999px;
+                  padding: 0.15em 0.6em;
+                  margin-top: 0.8em;
+                  box-shadow: 0 0.5px 2px 0 rgba(244, 122, 31, 0.08);
+                }
+                @media (min-width: 768px) {
+                  .glass-offer-card { padding: 1.5rem 1rem 1.25rem 1rem; max-width: 210px; }
+                  .glass-offer-badge { font-size: 0.55rem; top: -0.75rem; }
+                  .glass-offer-content { margin-top: 1.1rem; }
+                  .glass-offer-price-label { font-size: 1rem; }
+                  .glass-offer-price { font-size: 2.25rem; }
+                  .glass-offer-per-meal { font-size: 0.6rem; }
+                }
+                @media (min-width: 1024px) {
+                  .glass-offer-card { padding: 1.75rem 1.25rem 1.5rem 1.25rem; max-width: 250px; }
+                  .glass-offer-badge { font-size: 0.6rem; top: -1rem; }
+                  .glass-offer-content { margin-top: 1.4rem; }
+                  .glass-offer-price-label { font-size: 1.2rem; }
+                  .glass-offer-price { font-size: 3rem; }
+                  .glass-offer-per-meal { font-size: 0.65rem; }
+                }
+              `}</style>
             </motion.div>
           </div>
           {/* Desktop: Why Choose block in original place */}
@@ -39,12 +130,7 @@ const HeroSection = () => {
               }
             `}</style>
             <h2 className="why-choose-block text-2xl md:text-3xl lg:text-4xl font-bold mb-2 md:mb-3 text-left text-[#723303] md:whitespace-nowrap">Why Choose Neelam's Ghar-Ka-Khana?</h2>
-            <div className="why-choose-block text-gray-700 max-w-4xl text-base md:text-lg text-left">
-              <p>
-                We're more than just a food service — we deliver fresh,<br />
-                nutritious meals made with love, just like your mother's cooking, right to your doorstep.
-              </p>
-            </div>
+            {/* Removed the paragraph about delivering fresh, nutritious meals */}
           </div>
         </div>
         
