@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { useAuth } from '@/context/AuthContext';
 
 // Add custom style for no-spacing-table
 const noSpacingTableStyle = `
@@ -17,6 +18,7 @@ const noSpacingTableStyle = `
 `;
 
 const MenuPage = () => {
+  const { user, access } = useAuth();
   const menuItems = [
     {
       name: 'Daal',

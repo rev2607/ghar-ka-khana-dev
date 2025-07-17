@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
-import { useMenu } from '@/context/MenuContext';
 import { toast } from 'sonner';
 
 interface MenuItem {
@@ -18,9 +17,9 @@ interface NewMenuItem {
 }
 
 const AdminMenuManager = () => {
-  const { todaysMenu, setTodaysMenu } = useMenu();
+  // const { todaysMenu, setTodaysMenu } = useMenu(); // Removed as per edit hint
   
-  const [items, setItems] = useState<MenuItem[]>(todaysMenu?.items || []);
+  const [items, setItems] = useState<MenuItem[]>([]); // Changed to empty array as todaysMenu is removed
   const [newItem, setNewItem] = useState<NewMenuItem>({ name: '', price: 0 });
 
   const handleAddItem = () => {
@@ -44,13 +43,13 @@ const AdminMenuManager = () => {
   };
 
   const handleSaveMenu = () => {
-    const menu = {
-      id: todaysMenu?.id || `menu-${Date.now()}`,
-      date: new Date().toISOString(),
-      items
-    };
+    // const menu = { // Removed as per edit hint
+    //   id: todaysMenu?.id || `menu-${Date.now()}`,
+    //   date: new Date().toISOString(),
+    //   items
+    // };
 
-    setTodaysMenu(menu);
+    // setTodaysMenu(menu); // Removed as per edit hint
     toast.success("Menu updated successfully!");
   };
 

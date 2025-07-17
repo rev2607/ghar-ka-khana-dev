@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useIsMobile } from '@/hooks/use-mobile';
+import { useAuth } from '@/context/AuthContext';
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const isMobile = useIsMobile();
   const location = useLocation();
+  const { user, access, isAdmin, logout } = useAuth();
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -49,7 +51,20 @@ const Navbar = () => {
           <Link to="/terms" className={`text-[#222] text-lg font-medium hover:font-bold hover:text-[#F47A1F] transition-colors pb-1 ${isActive('/terms') ? 'border-b-2 border-orange-500' : ''}`}>Before Ordering</Link>
           <Link to="/about" className={`text-[#222] text-lg font-medium hover:font-bold hover:text-[#F47A1F] transition-colors pb-1 ${isActive('/about') ? 'border-b-2 border-orange-500' : ''}`}>About</Link>
           <Link to="/contact" className={`text-[#222] text-lg font-medium hover:font-bold hover:text-[#F47A1F] transition-colors pb-1 ${isActive('/contact') ? 'border-b-2 border-orange-500' : ''}`}>Contact Us</Link>
-          <Link to="/login" className={`text-[#222] text-lg font-medium hover:font-bold hover:text-[#F47A1F] transition-colors pb-1 ${isActive('/login') ? 'border-b-2 border-orange-500' : ''}`}>Login</Link>
+          {isAdmin && (
+            <Link to="/admin" className={`text-[#222] text-lg font-medium hover:font-bold hover:text-[#F47A1F] transition-colors pb-1 ${isActive('/admin') ? 'border-b-2 border-orange-500' : ''}`}>Admin Panel</Link>
+          )}
+          {user && access?.subscription_access && (
+            <Link to="/todays-menu" className={`text-[#222] text-lg font-medium hover:font-bold hover:text-[#F47A1F] transition-colors pb-1 ${isActive('/todays-menu') ? 'border-b-2 border-orange-500' : ''}`}>Today's Menu</Link>
+          )}
+          {user && access?.mealplan_access && (
+            <Link to="/meal-plan" className={`text-[#222] text-lg font-medium hover:font-bold hover:text-[#F47A1F] transition-colors pb-1 ${isActive('/meal-plan') ? 'border-b-2 border-orange-500' : ''}`}>Meal Plan</Link>
+          )}
+          {!user ? (
+            <Link to="/login" className={`text-[#222] text-lg font-medium hover:font-bold hover:text-[#F47A1F] transition-colors pb-1 ${isActive('/login') ? 'border-b-2 border-orange-500' : ''}`}>Login</Link>
+          ) : (
+            <button onClick={logout} className="text-[#222] text-lg font-medium hover:font-bold hover:text-[#F47A1F] transition-colors pb-1 bg-transparent border-none cursor-pointer">Logout</button>
+          )}
         </nav>
 
         {/* Mobile menu button */}
@@ -122,6 +137,49 @@ const Navbar = () => {
             >
               Contact
             </Link>
+            {isAdmin && (
+              <Link
+                to="/admin"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className={`block px-3 py-2 text-base font-medium text-[#222] hover:text-[#F47A1F] hover:bg-gray-50 rounded-md pb-1 ${isActive('/admin') ? 'border-b-2 border-orange-500' : ''}`}
+              >
+                Admin Panel
+              </Link>
+            )}
+            {user && access?.subscription_access && (
+              <Link
+                to="/todays-menu"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className={`block px-3 py-2 text-base font-medium text-[#222] hover:text-[#F47A1F] hover:bg-gray-50 rounded-md pb-1 ${isActive('/todays-menu') ? 'border-b-2 border-orange-500' : ''}`}
+              >
+                Today's Menu
+              </Link>
+            )}
+            {user && access?.mealplan_access && (
+              <Link
+                to="/meal-plan"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className={`block px-3 py-2 text-base font-medium text-[#222] hover:text-[#F47A1F] hover:bg-gray-50 rounded-md pb-1 ${isActive('/meal-plan') ? 'border-b-2 border-orange-500' : ''}`}
+              >
+                Meal Plan
+              </Link>
+            )}
+            {!user ? (
+              <Link
+                to="/login"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className={`block px-3 py-2 text-base font-medium text-[#222] hover:text-[#F47A1F] hover:bg-gray-50 rounded-md pb-1 ${isActive('/login') ? 'border-b-2 border-orange-500' : ''}`}
+              >
+                Login
+              </Link>
+            ) : (
+              <button
+                onClick={() => { logout(); setIsMobileMenuOpen(false); }}
+                className="block w-full text-left px-3 py-2 text-base font-medium text-[#222] hover:text-[#F47A1F] hover:bg-gray-50 rounded-md pb-1 bg-transparent border-none cursor-pointer"
+              >
+                Logout
+              </button>
+            )}
           </div>
         </div>
       )}

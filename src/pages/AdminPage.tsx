@@ -4,10 +4,8 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import AdminMenuManager from '@/components/AdminMenuManager';
-import AdminOrdersList from '@/components/AdminOrdersList';
 import AdminCustomerList from '@/components/AdminCustomerList';
 import AdminDeliveryList from '@/components/AdminDeliveryList';
-import ProtectedRoute from '@/components/ProtectedRoute';
 
 const AdminPage = () => {
   const [activeTab, setActiveTab] = useState('orders');
@@ -24,7 +22,6 @@ const AdminPage = () => {
         </section>
 
         <section className="py-8 container mx-auto px-4">
-          <ProtectedRoute adminOnly>
             <Tabs 
               defaultValue={activeTab} 
               onValueChange={setActiveTab}
@@ -59,10 +56,6 @@ const AdminPage = () => {
                 </TabsList>
               </div>
               
-              <TabsContent value="orders" className="mt-0">
-                <AdminOrdersList />
-              </TabsContent>
-              
               <TabsContent value="menu" className="mt-0">
                 <AdminMenuManager />
               </TabsContent>
@@ -75,7 +68,6 @@ const AdminPage = () => {
                 <AdminDeliveryList />
               </TabsContent>
             </Tabs>
-          </ProtectedRoute>
         </section>
       </main>
       <Footer />

@@ -123,6 +123,24 @@ export type Database = {
             referencedColumns: ["id"]
           },
         ]
+      },
+      user_access: {
+        Row: {
+          phone_number: string;
+          subscription_access: boolean;
+          mealplan_access: boolean;
+        };
+        Insert: {
+          phone_number: string;
+          subscription_access?: boolean;
+          mealplan_access?: boolean;
+        };
+        Update: {
+          phone_number?: string;
+          subscription_access?: boolean;
+          mealplan_access?: boolean;
+        };
+        Relationships: [];
       }
     }
     Views: {
