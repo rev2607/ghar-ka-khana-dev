@@ -14,7 +14,7 @@ const HeroSection = () => {
             <img
               src="/food.png"
               alt="Food Tray"
-              className="w-full max-w-[4000px] h-auto object-contain scale-150 -rotate-0 md:-rotate-6 mt-8 md:mt-12"
+              className="w-48 max-w-xs md:w-full md:max-w-[4000px] h-auto object-contain scale-150 -rotate-0 md:-rotate-6 mt-8 md:mt-12"
             />
             {/* Offer Price Glassmorphism Card */}
             <motion.div
