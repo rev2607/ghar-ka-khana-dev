@@ -14,7 +14,7 @@ const HeroSection = () => {
             <img
               src="/food.png"
               alt="Food Tray"
-              className="w-48 max-w-xs md:w-full md:max-w-[4000px] h-auto object-contain scale-150 -rotate-0 md:-rotate-6 mt-8 md:mt-12"
+              className="w-full max-w-[4000px] h-auto object-contain scale-150 -rotate-0 md:-rotate-6 mt-8 md:mt-12"
             />
             {/* Offer Price Glassmorphism Card */}
             <motion.div
@@ -55,7 +55,7 @@ const HeroSection = () => {
               <span className="block text-[#F47A1F]">Hygienic Homely</span>
               <span className="block text-[#F47A1F]">Meals</span>
             </h1>
-            <img src="/driver.png" alt="Delivery Driver" className="w-20 h-20 object-contain rounded-xl shadow ml-2 flex-shrink-0" style={{ background: '#fff' }} />
+            <img src="/driver.png" alt="Delivery Driver" className="w-28 h-28 object-contain rounded-xl shadow ml-2 flex-shrink-0" style={{ background: '#fff' }} />
           </div>
           {/* Headline for md+ screens (unchanged) */}
           <h1 className="hidden md:block font-poppins font-bold text-[3rem] lg:text-[3.5rem] xl:text-[4rem] leading-tight mb-4 md:mb-8 text-left">
