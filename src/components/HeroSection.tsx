@@ -63,17 +63,15 @@ const HeroSection = () => {
             />
           </div>
           {/* Delivery Driver Image (red box area) */}
-          <div className="absolute" style={{ top: '500px', right: '630px', width: '360px', height: '280px', zIndex: 5 }}>
+          <div className="absolute hidden md:block" style={{ top: '500px', right: '630px', width: '360px', height: '280px', zIndex: 5 }}>
             <img src="/driver.png" alt="Delivery Driver" className="w-full h-full object-contain rounded-xl" />
           </div>
           {/* Mobile: Why Choose block after delivery image */}
           <div className="block md:hidden w-full mt-4 mb-2 mx-auto">
             <h2 className="why-choose-block text-2xl font-bold mb-2 text-left text-[#723303]">Why Choose Neelam's Ghar-Ka-Khana?</h2>
-            <div className="why-choose-block text-gray-700 max-w-4xl text-base text-left">
-              <p>
-                We deliver fresh, nutritious meals made with love —<br />
-                just like your mother's cooking, delivered to your doorstep.
-              </p>
+            {/* Show driver.png on mobile below the heading */}
+            <div className="w-full flex justify-center my-4">
+              <img src="/driver.png" alt="Delivery Driver" className="w-40 h-auto rounded-xl shadow" />
             </div>
           </div>
         </div>
