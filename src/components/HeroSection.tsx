@@ -47,8 +47,18 @@ const HeroSection = () => {
         
         {/* Right Column: Headline and Delivery Image */}
         <div className="flex flex-col items-start justify-start flex-1 pt-4 md:pt-8 -ml-0 md:-ml-16 order-2 lg:order-2">
-          {/* Headline */}
-          <h1 className="font-poppins font-bold text-[2rem] md:text-[3rem] lg:text-[3.5rem] xl:text-[4rem] leading-tight mb-4 md:mb-8 text-left">
+          {/* Headline with driver image on mobile */}
+          <div className="flex flex-row items-center justify-between w-full mb-4 md:mb-8 block md:hidden">
+            <h1 className="font-poppins font-bold text-[2rem] leading-tight text-left flex-1">
+              <span className="block text-[#723303]">Guaranteed Taste,</span>
+              <span className="block text-[#723303]">Quality, Authentic &</span>
+              <span className="block text-[#F47A1F]">Hygienic Homely</span>
+              <span className="block text-[#F47A1F]">Meals</span>
+            </h1>
+            <img src="/driver.png" alt="Delivery Driver" className="w-20 h-20 object-contain rounded-xl shadow ml-2 flex-shrink-0" style={{ background: '#fff' }} />
+          </div>
+          {/* Headline for md+ screens (unchanged) */}
+          <h1 className="hidden md:block font-poppins font-bold text-[3rem] lg:text-[3.5rem] xl:text-[4rem] leading-tight mb-4 md:mb-8 text-left">
             <span className="block text-[#723303]">Guaranteed Taste,</span>
             <span className="block text-[#723303]">Quality, Authentic &</span>
             <span className="block text-[#F47A1F]">Hygienic Homely</span>
@@ -65,14 +75,6 @@ const HeroSection = () => {
           {/* Delivery Driver Image (red box area) */}
           <div className="absolute hidden md:block" style={{ top: '500px', right: '630px', width: '360px', height: '280px', zIndex: 5 }}>
             <img src="/driver.png" alt="Delivery Driver" className="w-full h-full object-contain rounded-xl" />
-          </div>
-          {/* Mobile: Why Choose block after delivery image */}
-          <div className="block md:hidden w-full mt-4 mb-2 mx-auto">
-            <h2 className="why-choose-block text-2xl font-bold mb-2 text-left text-[#723303]">Why Choose Neelam's Ghar-Ka-Khana?</h2>
-            {/* Show driver.png on mobile below the heading */}
-            <div className="w-full flex justify-center my-6">
-              <img src="/driver.png" alt="Delivery Driver" className="w-48 max-w-[80vw] h-auto rounded-2xl shadow-lg object-contain" style={{ background: '#fff' }} />
-            </div>
           </div>
         </div>
 
