@@ -49,6 +49,11 @@ const TermsPage = () => {
       icon: Package,
       title: "Package Options",
       content: "Tiffin packages are available on a Weekly, Monthly Subscription & Walk-In Take-Away (From Cloud Kitchen Location) basis."
+    },
+    {
+      icon: Package,
+      title: "Rajma-Rice Special Note",
+      content: "Considering Rajma-Rice being very Famous Indian Dish Combination, 'When there is a Rajma; Chapathi would be reduced to two and Rice & Rajma Quantity will be more.'"
     }
   ];
 
