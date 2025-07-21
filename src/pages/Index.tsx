@@ -22,7 +22,7 @@ const Index = () => {
         <section className="bg-brand-brown py-3 md:py-4 mt-12">
           <div className="container mx-auto px-4 text-center">
             <p className="text-white text-xs md:text-sm">
-              Disclaimer: * = 75/- is the Introductory offer for 1st 1 week order only; there by charges will be as per Menu
+              Disclaimer: * = 75/- is the Starting From for 1st 1 week order only; there by charges will be as per Menu
             </p>
           </div>
         </section>
