@@ -102,7 +102,6 @@ const MenuPage = () => {
                   <div className="w-full max-w-xs mt-auto bg-yellow-50 border-l-4 border-yellow-400 rounded px-2 py-1 text-yellow-900">
                     <table className="w-full text-xs md:text-sm text-left no-spacing-table">
                       <tbody>
-                        <tr className="align-top p-0"><td className="font-semibold p-0 align-top">One-Day Takeaway</td><td className="p-0 align-top">₹79 + delivery fees</td></tr>
                         <tr className="align-top p-0"><td className="font-semibold p-0 align-top">Weekly</td><td className="p-0 align-top">₹474</td></tr>
                         <tr className="align-top p-0"><td className="font-semibold p-0 align-top">Monthly</td><td className="p-0 align-top"><span className="line-through">₹1975</span> ₹1925</td></tr>
                       </tbody>
@@ -130,7 +129,6 @@ const MenuPage = () => {
                   <div className="w-full max-w-xs mt-auto bg-yellow-50 border-l-4 border-yellow-400 rounded px-2 py-1 text-yellow-900">
                     <table className="w-full text-xs md:text-sm text-left no-spacing-table">
                       <tbody>
-                        <tr className="align-top p-0"><td className="font-semibold p-0 align-top">One-Day Takeaway</td><td className="p-0 align-top">₹89 + delivery fee</td></tr>
                         <tr className="align-top p-0"><td className="font-semibold p-0 align-top">Weekly</td><td className="p-0 align-top">₹534</td></tr>
                         <tr className="align-top p-0"><td className="font-semibold p-0 align-top">Monthly</td><td className="p-0 align-top"><span className="line-through">₹2225</span> ₹2175</td></tr>
                       </tbody>
