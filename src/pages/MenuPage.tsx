@@ -84,7 +84,7 @@ const MenuPage = () => {
               <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-8 lg:gap-10 my-6 md:my-8">
                 {/* Veg Normal Plan */}
                 <div className="bg-white rounded-xl border border-black shadow-[0_2px_8px_rgba(0,0,0,0.12)] p-4 md:p-6 flex flex-col items-center">
-                  <h3 className="text-lg md:text-xl font-bold text-green-600 mb-2 text-center">(Veg Normal) Price ₹75</h3>
+                  <h3 className="text-lg md:text-xl font-bold text-green-600 mb-2 text-center">(Veg Normal) Price ₹79</h3>
                   <ul className="text-gray-800 text-sm md:text-base mb-4 text-left w-full max-w-sm space-y-2">
                     {[
                       'Chapathis',
@@ -102,16 +102,16 @@ const MenuPage = () => {
                   <div className="w-full max-w-xs mt-auto bg-yellow-50 border-l-4 border-yellow-400 rounded px-2 py-1 text-yellow-900">
                     <table className="w-full text-xs md:text-sm text-left no-spacing-table">
                       <tbody>
-                        <tr className="align-top p-0"><td className="font-semibold p-0 align-top">One-Day Takeaway</td><td className="p-0 align-top">₹85</td></tr>
-                        <tr className="align-top p-0"><td className="font-semibold p-0 align-top">Weekly</td><td className="p-0 align-top">₹450</td></tr>
-                        <tr className="align-top p-0"><td className="font-semibold p-0 align-top">Monthly</td><td className="p-0 align-top">₹1825</td></tr>
+                        <tr className="align-top p-0"><td className="font-semibold p-0 align-top">One-Day Takeaway</td><td className="p-0 align-top">₹79 + delivery fees</td></tr>
+                        <tr className="align-top p-0"><td className="font-semibold p-0 align-top">Weekly</td><td className="p-0 align-top">₹474</td></tr>
+                        <tr className="align-top p-0"><td className="font-semibold p-0 align-top">Monthly</td><td className="p-0 align-top"><span className="line-through">₹1975</span> ₹1925</td></tr>
                       </tbody>
                     </table>
                   </div>
                 </div>
                 {/* Veg Special Plan */}
                 <div className="bg-white rounded-xl border border-black shadow-[0_2px_8px_rgba(0,0,0,0.12)] p-4 md:p-6 flex flex-col items-center">
-                  <h3 className="text-lg md:text-xl font-bold text-green-600 mb-2 text-center">(Veg Special) Price ₹85</h3>
+                  <h3 className="text-lg md:text-xl font-bold text-green-600 mb-2 text-center">(Veg Special) Price ₹89</h3>
                   <ul className="text-gray-800 text-sm md:text-base mb-4 text-left w-full max-w-sm space-y-2">
                     {[
                       'Chapathis (May be combined)',
@@ -130,16 +130,16 @@ const MenuPage = () => {
                   <div className="w-full max-w-xs mt-auto bg-yellow-50 border-l-4 border-yellow-400 rounded px-2 py-1 text-yellow-900">
                     <table className="w-full text-xs md:text-sm text-left no-spacing-table">
                       <tbody>
-                        <tr className="align-top p-0"><td className="font-semibold p-0 align-top">One-Day Takeaway</td><td className="p-0 align-top">₹95</td></tr>
-                        <tr className="align-top p-0"><td className="font-semibold p-0 align-top">Weekly</td><td className="p-0 align-top">₹510</td></tr>
-                        <tr className="align-top p-0"><td className="font-semibold p-0 align-top">Monthly</td><td className="p-0 align-top">₹2075</td></tr>
+                        <tr className="align-top p-0"><td className="font-semibold p-0 align-top">One-Day Takeaway</td><td className="p-0 align-top">₹89 + delivery fee</td></tr>
+                        <tr className="align-top p-0"><td className="font-semibold p-0 align-top">Weekly</td><td className="p-0 align-top">₹534</td></tr>
+                        <tr className="align-top p-0"><td className="font-semibold p-0 align-top">Monthly</td><td className="p-0 align-top"><span className="line-through">₹2225</span> ₹2175</td></tr>
                       </tbody>
                     </table>
                   </div>
                 </div>
                 {/* Non-Veg Normal Plan */}
                 <div className="bg-white rounded-xl border border-black shadow-[0_2px_8px_rgba(0,0,0,0.12)] p-4 md:p-6 flex flex-col items-center">
-                  <h3 className="text-lg md:text-xl font-bold text-red-600 mb-2 text-center">(Combo Normal NV + Veg) Price ₹110</h3>
+                  <h3 className="text-lg md:text-xl font-bold text-red-600 mb-2 text-center">(Combo Normal NV + Veg)</h3>
                   <ul className="text-gray-800 text-sm md:text-base mb-4 text-left w-full max-w-sm space-y-2">
                     {[
                       'Chapathi',
@@ -156,15 +156,15 @@ const MenuPage = () => {
                   <div className="w-full max-w-xs mt-auto bg-yellow-50 border-l-4 border-yellow-400 rounded px-2 py-1 text-yellow-900">
                     <table className="w-full text-xs md:text-sm text-left no-spacing-table">
                       <tbody>
-                        <tr className="align-top p-0"><td className="font-semibold p-0 align-top">Weekly</td><td className="p-0 align-top">₹485</td></tr>
-                        <tr className="align-top p-0"><td className="font-semibold p-0 align-top">Monthly</td><td className="p-0 align-top">₹1965</td></tr>
+                        <tr className="align-top p-0"><td className="font-semibold p-0 align-top">Weekly</td><td className="p-0 align-top">₹505</td></tr>
+                        <tr className="align-top p-0"><td className="font-semibold p-0 align-top">Monthly</td><td className="p-0 align-top">₹2045</td></tr>
                       </tbody>
                     </table>
                   </div>
                 </div>
                 {/* Non-Veg Special Plan */}
                 <div className="bg-white rounded-xl border border-black shadow-[0_2px_8px_rgba(0,0,0,0.12)] p-4 md:p-6 flex flex-col items-center">
-                  <h3 className="text-lg md:text-xl font-bold text-red-700 mb-2 text-center">(Combo Special NV + Veg) Price ₹120</h3>
+                  <h3 className="text-lg md:text-xl font-bold text-red-700 mb-2 text-center">(Combo Special NV + Veg)</h3>
                   <ul className="text-gray-800 text-sm md:text-base mb-4 text-left w-full max-w-sm space-y-2">
                     {[
                       'Chapathi',
@@ -182,61 +182,13 @@ const MenuPage = () => {
                   <div className="w-full max-w-xs mt-auto bg-yellow-50 border-l-4 border-yellow-400 rounded px-2 py-1 text-yellow-900">
                     <table className="w-full text-xs md:text-sm text-left no-spacing-table">
                       <tbody>
-                        <tr className="align-top p-0"><td className="font-semibold p-0 align-top">Weekly</td><td className="p-0 align-top">₹545</td></tr>
-                        <tr className="align-top p-0"><td className="font-semibold p-0 align-top">Monthly</td><td className="p-0 align-top">₹2215</td></tr>
+                        <tr className="align-top p-0"><td className="font-semibold p-0 align-top">Weekly</td><td className="p-0 align-top">₹565</td></tr>
+                        <tr className="align-top p-0"><td className="font-semibold p-0 align-top">Monthly</td><td className="p-0 align-top">₹2295</td></tr>
                       </tbody>
                     </table>
                   </div>
                 </div>
-                {/* Normal Non-Veg Plan */}
-                <div className="bg-white rounded-xl border border-black shadow-[0_2px_8px_rgba(0,0,0,0.12)] p-4 md:p-6 flex flex-col items-center">
-                  <h3 className="text-lg md:text-xl font-bold text-red-600 mb-2 text-center">Normal Non-Veg</h3>
-                  <ul className="text-gray-800 text-sm md:text-base mb-4 text-left w-full max-w-sm space-y-2">
-                    {[
-                      'Chapathi',
-                      'Rice',
-                      'Special Chicken Curry',
-                      'Salad/Papad/Pickle',
-                    ].map((item, idx) => (
-                      <li key={idx} className="flex items-center gap-2">
-                        <img src={getMenuItemImage(item)} alt="" className="w-6 h-6 md:w-7 md:h-7 rounded object-cover border border-gray-200" />
-                        <span className={item.includes('Chicken') ? 'text-red-600 font-bold' : ''}>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <div className="w-full max-w-xs mt-auto bg-yellow-50 border-l-4 border-yellow-400 rounded px-2 py-1 text-yellow-900">
-                    <table className="w-full text-xs md:text-sm text-left no-spacing-table">
-                      <tbody>
-                        <tr className="align-top p-0"><td className="font-semibold p-0 align-top">One-Day Takeaway</td><td className="p-0 align-top">₹120</td></tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-                {/* Special Non-Veg Plan */}
-                <div className="bg-white rounded-xl border border-black shadow-[0_2px_8px_rgba(0,0,0,0.12)] p-4 md:p-6 flex flex-col items-center">
-                  <h3 className="text-lg md:text-xl font-bold text-red-700 mb-2 text-center">Special Non-Veg</h3>
-                  <ul className="text-gray-800 text-sm md:text-base mb-4 text-left w-full max-w-sm space-y-2">
-                    {[
-                      'Chapathi',
-                      'Rice',
-                      'Special Chicken Curry',
-                      'Salad/Papad/Pickle',
-                      'Compliment',
-                    ].map((item, idx) => (
-                      <li key={idx} className="flex items-center gap-2">
-                        <img src={getMenuItemImage(item)} alt="" className="w-6 h-6 md:w-7 md:h-7 rounded object-cover border border-gray-200" />
-                        <span className={item.includes('Chicken') ? 'text-red-700 font-bold' : ''}>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <div className="w-full max-w-xs mt-auto bg-yellow-50 border-l-4 border-yellow-400 rounded px-2 py-1 text-yellow-900">
-                    <table className="w-full text-xs md:text-sm text-left no-spacing-table">
-                      <tbody>
-                        <tr className="align-top p-0"><td className="font-semibold p-0 align-top">One-Day Takeaway</td><td className="p-0 align-top">₹130</td></tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
+
                 {/* End of Menu Plans Grid */}
               </div>
             </div>
@@ -247,10 +199,11 @@ const MenuPage = () => {
           <strong>Note:</strong><br />
           1. Bhaji will change daily — enjoy a mix of homely seasonal curries throughout the month!<br />
           2. One Time Refundable Security Deposit 299/- to be paid towards Tiffin Box<br />
-          3. Promo plans are one-time offers only.<br />
+          3. Special Meal: Desset, Papad or Pickle, Extra salad & Puri sometimes<br />
           4. No service on Sundays and public holidays.<br />
           5. Weekly = 6 days, Monthly = 25 days.<br />
-          6. Combo pack have 1 day (Wednesday) Chicken and remaining 5 days Veg
+          6. Combo pack have 1 day (Wednesday) Chicken and remaining 5 days Veg<br />
+          7. 9/- would be additional charge if 1-Single Delivery Ordered
         </div>
 
         <section className="py-8 md:py-16">

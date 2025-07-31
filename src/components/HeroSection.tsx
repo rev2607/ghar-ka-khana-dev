@@ -28,7 +28,7 @@ const HeroSection = () => {
               <div className="font-bold text-[#fff] bg-gradient-to-r from-yellow-400 to-orange-500 px-4 py-1 rounded-full mb-2 whitespace-nowrap">Starting From</div>
               <div className="flex flex-row items-end gap-2 justify-center mb-1 whitespace-nowrap">
                 <span className="text-[#723303] text-3xl md:text-5xl font-bold">Price =</span>
-                <span className="text-[#e11d48] text-3xl md:text-5xl font-extrabold">75/-</span>
+                <span className="text-[#e11d48] text-3xl md:text-5xl font-extrabold">79/-</span>
               </div>
               <div className="text-[#723303] text-base md:text-lg font-medium bg-orange-100 rounded-full px-3 py-1 mt-1">(Per Meal)</div>
             </motion.div>

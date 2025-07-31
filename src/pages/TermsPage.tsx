@@ -93,25 +93,81 @@ const TermsPage = () => {
 
                 {/* Content */}
                 <div className="px-8 pb-8 pt-4">
-                  <div className="space-y-8 pt-0">
-                    {terms.map((term, index) => {
-                      const IconComponent = term.icon;
-                      return (
-                        <div key={index} className="flex items-start space-x-4 p-6 bg-gray-50 rounded-xl border border-gray-100 hover:shadow-md transition-shadow duration-200">
-                          <div className="flex-shrink-0 w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center">
-                            <IconComponent className="w-6 h-6 text-orange-600" />
-                          </div>
-                          <div className="flex-1">
-                            <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                              {term.title}
-                            </h3>
-                            <p className="text-gray-700 leading-relaxed">
-                              {term.content}
-                            </p>
-                          </div>
+                  <div className="space-y-4 pt-0">
+                    <ul className="space-y-4 text-gray-700 leading-relaxed">
+                      <li className="flex items-start">
+                        <span className="text-orange-600 font-bold mr-3 mt-1">•</span>
+                        <div>
+                          <strong className="text-gray-900">Advance Booking Required:</strong> All orders must be placed at least 24 hours in advance to ensure timely preparation and delivery.
                         </div>
-                      );
-                    })}
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-orange-600 font-bold mr-3 mt-1">•</span>
+                        <div>
+                          <strong className="text-gray-900">Full Payment in Advance:</strong> Full payment must be made 100% in advance at the time of booking.
+                        </div>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-orange-600 font-bold mr-3 mt-1">•</span>
+                        <div>
+                          <strong className="text-gray-900">Delivery Limitations:</strong> Tiffin delivery will be provided only up to the 1st floor of any building. Customers on higher floors are requested to coordinate accordingly.
+                        </div>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-orange-600 font-bold mr-3 mt-1">•</span>
+                        <div>
+                          <strong className="text-gray-900">Tiffin Box Return Policy:</strong> Customers are required to return the previous day's empty tiffin box at the time of receiving the new one.
+                        </div>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-orange-600 font-bold mr-3 mt-1">•</span>
+                        <div>
+                          <strong className="text-gray-900">Service Days:</strong> 25 Days is for a Month Package & 6 Days for a Week Package; This excludes Sundays and Public Holidays.
+                        </div>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-orange-600 font-bold mr-3 mt-1">•</span>
+                        <div>
+                          <strong className="text-gray-900">Holiday Schedule:</strong> Refer to the Holidays list in 'About' section on our website for the full list of non-service days.
+                        </div>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-orange-600 font-bold mr-3 mt-1">•</span>
+                        <div>
+                          <strong className="text-gray-900">Delivery Timings:</strong> Lunch: 11:00 AM – 1:30 PM & Dinner: 7:00 PM – 9:30 PM
+                        </div>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-orange-600 font-bold mr-3 mt-1">•</span>
+                        <div>
+                          <strong className="text-gray-900">Service Interruption Policy:</strong> In case if company is unable to deliver on a scheduled day, the same will be intimated in advance & will compensate the meal by extending the service period accordingly.
+                        </div>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-orange-600 font-bold mr-3 mt-1">•</span>
+                        <div>
+                          <strong className="text-gray-900">Package Options:</strong> Tiffin packages are available on a Weekly, Monthly Subscription & Walk-In Take-Away (From Cloud Kitchen Location) basis.
+                        </div>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-orange-600 font-bold mr-3 mt-1">•</span>
+                        <div>
+                          <strong className="text-gray-900">Rajma-Rice Special Note:</strong> Considering Rajma-Rice being very Famous Indian Dish Combination, 'When there is a Rajma; Chapathi would be reduced to two and Rice & Rajma Quantity will be more.'
+                        </div>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-orange-600 font-bold mr-3 mt-1">•</span>
+                        <div>
+                          <strong className="text-gray-900">Cancellation Policy:</strong> If package is cancelled in between, so far delivered Tiffin prize would be calculated as per Per Day Prize and remaining amount be refunded.
+                        </div>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-orange-600 font-bold mr-3 mt-1">•</span>
+                        <div>
+                          <strong className="text-gray-900">Advance Meal Cancellation:</strong> Please inform atleast 1 day in advance if you do not need Meal by next day; otherwise Meal would be calculated for the day.
+                        </div>
+                      </li>
+                    </ul>
                   </div>
 
                   {/* Footer */}
