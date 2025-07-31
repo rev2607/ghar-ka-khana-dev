@@ -1,7 +1,7 @@
 import React from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import { CheckCircle, Clock, CreditCard, MapPin, Package, Calendar, AlertCircle, Info } from 'lucide-react';
+import { CheckCircle, Clock, CreditCard, MapPin, Package, Calendar, AlertCircle, Info, XCircle } from 'lucide-react';
 
 const TermsPage = () => {
   const terms = [
@@ -54,6 +54,11 @@ const TermsPage = () => {
       icon: Package,
       title: "Rajma-Rice Special Note",
       content: "Considering Rajma-Rice being very Famous Indian Dish Combination, 'When there is a Rajma; Chapathi would be reduced to two and Rice & Rajma Quantity will be more.'"
+    },
+    {
+      icon: XCircle,
+      title: "Cancellation Policy",
+      content: "If package is cancelled in between, so far delivered Tiffin prize would be calculated as per Per Day Prize and remaining amount be refunded."
     }
   ];
 
