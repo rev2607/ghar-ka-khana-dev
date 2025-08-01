@@ -155,7 +155,7 @@ const MenuPage = () => {
                     <table className="w-full text-xs md:text-sm text-left no-spacing-table">
                       <tbody>
                         <tr className="align-top p-0"><td className="font-semibold p-0 align-top">Weekly</td><td className="p-0 align-top">₹505</td></tr>
-                        <tr className="align-top p-0"><td className="font-semibold p-0 align-top">Monthly</td><td className="p-0 align-top">₹2045</td></tr>
+                        <tr className="align-top p-0"><td className="font-semibold p-0 align-top">Monthly</td><td className="p-0 align-top"><span className="line-through">₹2099</span> ₹2045</td></tr>
                       </tbody>
                     </table>
                   </div>
@@ -181,7 +181,7 @@ const MenuPage = () => {
                     <table className="w-full text-xs md:text-sm text-left no-spacing-table">
                       <tbody>
                         <tr className="align-top p-0"><td className="font-semibold p-0 align-top">Weekly</td><td className="p-0 align-top">₹565</td></tr>
-                        <tr className="align-top p-0"><td className="font-semibold p-0 align-top">Monthly</td><td className="p-0 align-top">₹2295</td></tr>
+                        <tr className="align-top p-0"><td className="font-semibold p-0 align-top">Monthly</td><td className="p-0 align-top"><span className="line-through">₹2349</span> ₹2295</td></tr>
                       </tbody>
                     </table>
                   </div>
